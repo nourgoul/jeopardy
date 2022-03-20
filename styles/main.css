@@ -1,0 +1,230 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+body {
+    background-color: rgb(48, 47, 47);
+}
+
+/* For mobile phones: */
+
+[class*="col-"] {
+    width: 100%;
+    float: left;
+    margin-bottom: 22px;
+    padding: 10px;
+}  
+
+body {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+
+    /* For mobile phones and tablets: */
+
+    [class*="col-"] {
+        width: 100%;
+    }
+} 
+
+
+@media only screen and (min-width: 768px) {
+
+    .col-1 {
+        width: 8.33%;
+    }
+
+    .col-2 {
+        width: 16.67%;
+    }
+
+    .col-4 {
+        width: 33.3%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .col-6 {
+        width: 50%;
+    }
+
+    .col-8 {
+        width: 66.67%;
+    }
+
+    .col-10 {
+        width: 83.3%;
+    }
+
+    .col-11 {
+        width: 91.67%;
+    }
+    
+    .col-12 {
+        width: 100%;
+    }
+}
+
+.row {
+    width: 100%;
+    margin: 0px;
+    padding: 10px;
+}
+
+.navbar-brand {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.navbar {
+    padding: 14px;
+}
+
+.homepage {
+    background: url('../images/main-background.png');
+    background-size: 100%;
+}
+
+.card-body {
+    background-color: navy;
+    color: white;
+}
+
+.card-title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.card-body a.btn {
+    margin-top: 10px;
+}
+
+.add-form {
+    color:white;
+    font-size:22px;
+}
+
+.add-form h1 {
+    font-size: 48px;
+    margin-bottom: 25px;
+}
+
+h1 {
+    color: white;
+}
+
+h4 {
+    color: white;
+    font-size: 20px;
+}
+
+p {
+    color: white;
+}
+
+.box {
+    height:100px;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-right: 5px;
+    background-color: grey;
+    border: solid 1px white;
+}
+
+.score {
+    padding-top: 75px;
+    font-weight: bold;
+    text-align: right;
+    font-size: 20px;
+}
+
+.exit {
+    padding-top: 690px;
+    width: 100%;
+}
+
+col-2{
+    border:solid; 
+    width:100%;
+}
+
+
+.main-button:hover {
+    color:yellow;
+}
+
+input:focus {
+    color: blue;
+}
+
+.sub-button:active {
+    font-weight: bold;
+    background-color:dodgerblue;
+}
+
+.topic {
+    height:10px;
+    font-weight: bold;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-right: 5px;
+}
+
+a:hover {
+    background-color: blue;
+}
