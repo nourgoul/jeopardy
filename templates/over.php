@@ -24,7 +24,7 @@
     <nav class="navbar navbar-dark bg-dark">
         <a class="navbar-brand">Online Jeopardy</a>
         <form class="form-inline">
-            <button class="btn btn-success my-2 my-sm-0" type="button">Log In</button>
+            <a class="btn btn-success" href="?command=login">Log In</a>
         </form>
     </nav>
 
