@@ -82,6 +82,7 @@
                     <a class="btn btn-success" href="?command=jeopardy">Start Game</a>
                 </form>
             </div>
+            <?=$tid?>
         </section>
     </div>
 

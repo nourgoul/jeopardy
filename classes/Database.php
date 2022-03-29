@@ -10,7 +10,7 @@ class Database {
     }
 
     public function query($query, $bparam=null, ...$params) {
-        $stmt = $this->prepare($query);
+        $stmt = $this->mysqli->prepare($query);
         if ($bparam != null) {
             $stmt->bind_param($bparam, ...$params);
         }
@@ -24,5 +24,9 @@ class Database {
         }
 
         return true;
+    }
+
+    public function getInsertId() {
+        return $this->mysqli->insert_id;
     }
 }
