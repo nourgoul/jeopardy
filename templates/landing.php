@@ -24,7 +24,7 @@
     <nav class="navbar navbar-dark bg-dark">
         <a class="navbar-brand">Online Jeopardy</a>
         <form class="form-inline">
-            <button class="btn btn-success my-2 my-sm-0" type="button">Log In</button>
+            <a class="btn btn-success" href="?command=login">Log In</a>
         </form>
     </nav>
 
@@ -42,7 +42,7 @@
                             be used in future randomly generated game boards. Afterwards, you will be able to proceed to
                             a randomly generated game board and play Jeopardy!
                         </p>
-                        <a href="add.html" class="btn btn-primary main-button">Get Started</a>
+                        <a href="?command=add" class="btn btn-primary main-button">Get Started</a>
                     </div>
                 </div>
             </div>

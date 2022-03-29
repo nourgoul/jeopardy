@@ -225,6 +225,6 @@ input:focus {
     margin-right: 5px;
 }
 
-a:hover {
+.jeopardy-card:hover {
     background-color: blue;
 }

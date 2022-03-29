@@ -28,7 +28,7 @@
         <section class="row add-form">
             <div class="col-12 add-form">
                 <h1>Add A Category</h1>
-                <form>
+                <form action="?command=add" method="post">
                     <label for="top">Topic Name:</label>
                     <input type="text" id="top" name="top" required><br><br>
                     <div class="col-6 add-form">
@@ -75,8 +75,8 @@
                         <label for="a10">Answer 10:</label>
                         <input type="text" id="a10" name="a10"><br><br>
                     </div>
-                    <input class="btn btn-primary sub-button" type="submit" value="Submit">
-                    <a class="btn btn-success" href="jeopardy.html">Start Game</a>
+                    <button type="submit" class="btn btn-primary sub-button">Submit</button>
+                    <a class="btn btn-success" href="?command=jeopardy">Start Game</a>
                 </form>
             </div>
         </section>

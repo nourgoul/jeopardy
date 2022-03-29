@@ -38,43 +38,43 @@
             <!-- actual buttons -->
             <!-- row 1 -->
             <div class="row">
-                <a href="#" class="box btn btn-fix text-center col-2"><div class="well card-box bg-blue"><p>Card 1</p></div></a>
-                <a href="#" class="box btn btn-fix text-center col-2"><div class="well card-box bg-blue"><p>Card 2</p></div></a>
-                <a href="#" class="box btn btn-fix text-center col-2"><div class="well card-box bg-blue"><p>Card 3</p></div></a>
-                <a href="#" class="box btn btn-fix text-center col-2"><div class="well card-box bg-blue"><p>Card 4</p></div></a>
-                <a href="#" class="box btn btn-fix text-center col-2"><div class="well card-box bg-blue"><p>Card 5</p></div></a>
+                <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card"><div class="well card-box bg-blue"><p>Card 1</p></div></a>
+                <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card"><div class="well card-box bg-blue"><p>Card 2</p></div></a>
+                <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card"><div class="well card-box bg-blue"><p>Card 3</p></div></a>
+                <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card"><div class="well card-box bg-blue"><p>Card 4</p></div></a>
+                <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card"><div class="well card-box bg-blue"><p>Card 5</p></div></a>
             </div>
 
             <div class="row">
-                <a href="#" class="box btn btn-fix text-center col-2"><div class="well card-box bg-blue"><p>Card 1</p></div></a>
-                <a href="#" class="box btn btn-fix text-center col-2"><div class="well card-box bg-blue"><p>Card 2</p></div></a>
-                <a href="#" class="box btn btn-fix text-center col-2"><div class="well card-box bg-blue"><p>Card 3</p></div></a>
-                <a href="#" class="box btn btn-fix text-center col-2"><div class="well card-box bg-blue"><p>Card 4</p></div></a>
-                <a href="#" class="box btn btn-fix text-center col-2"><div class="well card-box bg-blue"><p>Card 5</p></div></a>
+                <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card"><div class="well card-box bg-blue"><p>Card 1</p></div></a>
+                <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card"><div class="well card-box bg-blue"><p>Card 2</p></div></a>
+                <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card"><div class="well card-box bg-blue"><p>Card 3</p></div></a>
+                <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card"><div class="well card-box bg-blue"><p>Card 4</p></div></a>
+                <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card"><div class="well card-box bg-blue"><p>Card 5</p></div></a>
             </div>
 
             <div class="row">
-                <a href="#" class="box btn btn-fix text-center col-2"><div class="well card-box bg-blue"><p>Card 1</p></div></a>
-                <a href="#" class="box btn btn-fix text-center col-2"><div class="well card-box bg-blue"><p>Card 2</p></div></a>
-                <a href="#" class="box btn btn-fix text-center col-2"><div class="well card-box bg-blue"><p>Card 3</p></div></a>
-                <a href="#" class="box btn btn-fix text-center col-2"><div class="well card-box bg-blue"><p>Card 4</p></div></a>
-                <a href="#" class="box btn btn-fix text-center col-2"><div class="well card-box bg-blue"><p>Card 5</p></div></a>
+                <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card"><div class="well card-box bg-blue"><p>Card 1</p></div></a>
+                <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card"><div class="well card-box bg-blue"><p>Card 2</p></div></a>
+                <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card"><div class="well card-box bg-blue"><p>Card 3</p></div></a>
+                <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card"><div class="well card-box bg-blue"><p>Card 4</p></div></a>
+                <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card"><div class="well card-box bg-blue"><p>Card 5</p></div></a>
             </div>
 
             <div class="row">
-                <a href="#" class="box btn btn-fix text-center col-2"><div class="well card-box bg-blue"><p>Card 1</p></div></a>
-                <a href="#" class="box btn btn-fix text-center col-2"><div class="well card-box bg-blue"><p>Card 2</p></div></a>
-                <a href="#" class="box btn btn-fix text-center col-2"><div class="well card-box bg-blue"><p>Card 3</p></div></a>
-                <a href="#" class="box btn btn-fix text-center col-2"><div class="well card-box bg-blue"><p>Card 4</p></div></a>
-                <a href="#" class="box btn btn-fix text-center col-2"><div class="well card-box bg-blue"><p>Card 5</p></div></a>
+                <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card"><div class="well card-box bg-blue"><p>Card 1</p></div></a>
+                <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card"><div class="well card-box bg-blue"><p>Card 2</p></div></a>
+                <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card"><div class="well card-box bg-blue"><p>Card 3</p></div></a>
+                <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card"><div class="well card-box bg-blue"><p>Card 4</p></div></a>
+                <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card"><div class="well card-box bg-blue"><p>Card 5</p></div></a>
             </div>
 
             <div class="row">
-                <a href="#" class="box btn btn-fix text-center col-2"><div class="well card-box bg-blue"><p>Card 1</p></div></a>
-                <a href="#" class="box btn btn-fix text-center col-2"><div class="well card-box bg-blue"><p>Card 2</p></div></a>
-                <a href="#" class="box btn btn-fix text-center col-2"><div class="well card-box bg-blue"><p>Card 3</p></div></a>
-                <a href="#" class="box btn btn-fix text-center col-2"><div class="well card-box bg-blue"><p>Card 4</p></div></a>
-                <a href="#" class="box btn btn-fix text-center col-2"><div class="well card-box bg-blue"><p>Card 5</p></div></a>
+                <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card"><div class="well card-box bg-blue"><p>Card 1</p></div></a>
+                <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card"><div class="well card-box bg-blue"><p>Card 2</p></div></a>
+                <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card"><div class="well card-box bg-blue"><p>Card 3</p></div></a>
+                <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card"><div class="well card-box bg-blue"><p>Card 4</p></div></a>
+                <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card"><div class="well card-box bg-blue"><p>Card 5</p></div></a>
             </div>
 
         </div>        
@@ -83,7 +83,7 @@
             <h1>Score: 500</h1>
 
             <div class="exit">
-                <a class="btn btn-danger" href="index.html">End Game</a>
+                <a class="btn btn-danger" href="?command=over">End Game</a>
             </div>
 
         </div>
