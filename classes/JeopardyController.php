@@ -3,9 +3,11 @@
     class JeopardyController {
 
         private $command;
+        private $db;
 
         public function __construct($command) {
             $this->command = $command;
+            $this->db = new Database();
         }
 
         public function run() {
@@ -71,6 +73,10 @@
         private function add() {
             if(!isset($_SESSION)) { 
                 session_start(); 
+            }
+            
+            if (isset($_POST[""])) { // if the user submitted a topic and questions
+
             }
             include("templates/add.php");
         }
