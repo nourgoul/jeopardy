@@ -228,3 +228,7 @@ input:focus {
 .jeopardy-card:hover {
     background-color: blue;
 }
+
+.white {
+    color: white;
+}

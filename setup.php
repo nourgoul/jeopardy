@@ -12,6 +12,7 @@ $db->query("drop table if exists question;");
 
 $db->query("create table user (
                 id int not null auto_increment,
+                email text not null,
                 name text not null,
                 password text not null,
                 high_score int default 0,
