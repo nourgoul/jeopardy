@@ -23,6 +23,7 @@
     <div class="container row">
         <div class="col-10 container">
             <!-- game name -->
+            <h1 class="h1">Hello, <?=$_SESSION["name"]?>.</h1>
             <h1 class="h1 text-center">JEOPARDY</h1>
 
             <!-- topic names -->        

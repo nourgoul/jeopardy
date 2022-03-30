@@ -37,23 +37,13 @@ class JeopardyController
 
     private function login()
     {
-        if (!isset($_SESSION)) {
-            session_start();
-        }
-        // Implement login template and functionality
-        if (isset($_POST["email"])) {
+
+        if (isset($_POST["email"], $_POST["name"], $_POST["password"]) && !empty($_POST["email"])  && !empty($_POST["name"])  && !empty($_POST["password"])) { /// validate the email coming in
             $data = $this->db->query("select * from user where email = ?;", "s", $_POST["email"]);
+
             if ($data === false) {
                 $error_msg = "Error checking for user";
-            } else if (!empty($data)) {
-                if (password_verify($_POST["password"], $data[0]["password"])) {
-                    $_SESSION["name"] = $_POST["name"];
-                    $_SESSION["email"] = $_POST["email"];
-                    header("Location: ?command=jeopardy");
-                } else {
-                    $error_msg = "Wrong password";
-                }
-            } else {
+            } else if (empty($data)) { //if there is no user then insert them
                 $insert = $this->db->query(
                     "insert into user (name, email, password) values (?, ?, ?);",
                     "sss",
@@ -63,10 +53,21 @@ class JeopardyController
                 );
                 if ($insert === false) {
                     $error_msg = "Error inserting user";
+                }
+                $data = $this->db->query("select * from user where email = ?;", "s", $_POST["email"]); //reload data after insert
+            }
+
+            if ($data === false) {
+                $error_msg = "Error checking for user";
+            } else if (!empty($data)) {
+                if (password_verify($_POST["password"], $data[0]["password"])) {
+                    $_SESSION["name"] = $data[0]["name"];
+                    $_SESSION["email"] = $data[0]["email"];
+                    $_SESSION["id"] = $data[0]["id"];
+
+                    header("Location: ?command=add");
                 } else {
-                    $_SESSION["name"] = $_POST["name"];
-                    $_SESSION["email"] = $_POST["email"];
-                    header("Location: ?command=jeopardy");
+                    $error_msg = "Wrong password";
                 }
             }
         }
