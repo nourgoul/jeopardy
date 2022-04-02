@@ -115,7 +115,7 @@ class JeopardyController
         }
         $tid = 99;
         if (isset($_POST["top"])) { // if the user submitted a topic and questions
-            $this->db->query("insert into topic (topic_name, user_id) values (?, ?);", "si", $_POST["top"], 23); // change 23 to user id (session variable?)
+            $this->db->query("insert into topic (topic_name, user_id) values (?, ?);", "si", $_POST["top"], $_SESSION["id"]); 
             $tid = $this->db->getInsertId();
             $this->db->query("insert into question (question, answer, topic_id) values (?, ?, ?);", "ssi", $_POST["q1"], $_POST["a1"], $tid);
             $this->db->query("insert into question (question, answer, topic_id) values (?, ?, ?);", "ssi", $_POST["q2"], $_POST["a2"], $tid);
