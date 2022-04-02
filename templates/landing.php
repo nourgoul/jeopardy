@@ -46,7 +46,7 @@
                             be used in future randomly generated game boards. Afterwards, you will be able to proceed to
                             a randomly generated game board and play Jeopardy!
                         </p>
-                        <a href="?command=add" class="btn btn-primary main-button">Get Started</a>
+                        <a href="?command=jeopardy" class="btn btn-primary main-button">Get Started</a>
                     </div>
                 </div>
             </div>

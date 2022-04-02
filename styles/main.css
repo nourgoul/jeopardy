@@ -232,3 +232,10 @@ input:focus {
 .white {
     color: white;
 }
+
+h1.gameOver {
+    font-size: 72px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
