@@ -4,7 +4,7 @@ spl_autoload_register(function ($classname) {
 });
 
 mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
-$db = new mysqli(Config::$db["host"], Config::$db["user"], Config::$db["pass"], Config::$db["data"]);
+$db = new mysqli(Config::$db["host"], Config::$db["user"], Config::$db["pass"], Config::$db["database"]);
 
 $db->query("drop table if exists user;");
 $db->query("drop table if exists topic;");

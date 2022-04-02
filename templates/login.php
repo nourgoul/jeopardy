@@ -19,7 +19,7 @@
 <nav class="navbar navbar-dark bg-dark">
     <a class="navbar-brand">Online Jeopardy</a>
     <form class="form-inline">
-        <a class="btn btn-success" href="?command=login">Log In</a>
+        <a class="btn btn-secondary" href="?command=landing">Cancel</a>
     </form>
 </nav>
 

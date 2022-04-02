@@ -23,9 +23,13 @@
 
     <nav class="navbar navbar-dark bg-dark">
         <a class="navbar-brand">Online Jeopardy</a>
-        <form class="form-inline">
-            <a class="btn btn-success" href="?command=login">Log In</a>
-        </form>
+        <?php
+            if (isset($_SESSION["id"])) { // if user is logged in, show logout button
+                echo '<form class="form-inline"> <a class="btn btn-danger" href="?command=logout">Log Out</a> </form>';
+            } else { // if not logged in, show login button
+                echo '<form class="form-inline"> <a class="btn btn-success" href="?command=login">Log In</a> </form>';
+            }
+        ?>
     </nav>
 
     <div class="container">

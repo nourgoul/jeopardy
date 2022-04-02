@@ -97,6 +97,7 @@ class JeopardyController
         if (!isset($_SESSION)) {
             session_start();
         }
+        unset($_SESSION["id"]);
         session_destroy();
     }
 
