@@ -55,14 +55,20 @@
                                 echo '<input type="checkbox" id="' . $topics[$i]["id"] . '" name="' . $topics[$i]["id"] . '" value="' . $topics[$i]["topic_name"] . '">';
                                 echo '<label class = "gameOver" for="' . $topics[$i]["id"] . '">' . $topics[$i]["topic_name"] . '</label><br>';
                             }
+                        } else if (isset($_SESSION["id"])) {
+                            echo '<h6 class = "gameOver">ERROR: You have no saved personal topics.</h6>';
+                        } else {
+                            echo '<h6 class = "gameOver">ERROR: Must be signed in to access personal topics.</h6>';
                         }
                     ?>
                     </div>
                     <div class="text-center">      
                         <?php
                             echo '<input type="hidden" name="newHS" value="' . $newHS . '">'; // check this for POST submission and also to display newHS message corectly
+                            if (count($topics) !== 0) {
+                                echo '<button type="submit" class="btn btn-warning">Delete Selected</button>';
+                            }
                         ?>         
-                        <button type="submit" class="btn btn-warning">Delete Selected</button>
                         <a href="?command=jeopardy" class="btn btn-success">Play Again</a>
                         <a href="?command=logout" class="btn btn-danger">Log Out</a>
                     </div>
