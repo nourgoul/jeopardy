@@ -270,3 +270,11 @@ label.gameOver {
     margin-bottom: 5px;
     margin-left: 10px;
 }
+
+h6.gameOver {
+    font-size:18px;
+    color: red;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 10px;
+}
