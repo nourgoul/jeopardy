@@ -144,12 +144,18 @@ class JeopardyController
             $data = $this->db->query("select high_score from user where id = ?;", "i", $_SESSION["id"]);
             if ($score > $data[0]["high_score"]) {
                 $this->db->query("update user set high_score = ? where id = ?;", "ii", $score, $_SESSION["id"]);
-                $newHS = "false";
+                $newHS = "true";
             }
             $topics = $this->db->query("select * from topic where user_id = ?;", "i", $_SESSION["id"]);
         }
 
         if (isset($_POST["newHS"])) {
+            $newHS = $_POST["newHS"]; // maintain previous high score message
+            foreach (array_keys($_POST) as $tid) { // each tid corresponds to a topic id to be deleted
+                $this->db->query("delete from question where topic_id = ?;", "i", $tid); // delete related questions
+                $this->db->query("delete from topic where id = ?;", "i", $tid); // delete topic itself
+            }
+            $topics = $this->db->query("select * from topic where user_id = ?;", "i", $_SESSION["id"]); // update topics array
         }
         include("templates/over.php");
     }
