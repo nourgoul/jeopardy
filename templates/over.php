@@ -69,7 +69,7 @@
                                 echo '<button type="submit" class="btn btn-warning">Delete Selected</button>';
                             }
                         ?>         
-                        <a href="?command=jeopardy" class="btn btn-success">Play Again</a>
+                        <a href="?command=start" class="btn btn-success">Play Again</a>
                         <a href="?command=logout" class="btn btn-danger">Log Out</a>
                     </div>
                 </form>
