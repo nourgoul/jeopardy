@@ -99,6 +99,10 @@ class JeopardyController
              }
             $topics = $this->db->query("select * from topic where user_id = ?;", "i", $_SESSION["id"]);
         }
+
+        if (isset($_POST["newHS"])) {
+            
+        }
         include("templates/over.php");
     }
 
