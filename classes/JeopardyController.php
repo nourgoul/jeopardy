@@ -18,6 +18,9 @@ class JeopardyController
             case "jeopardy":
                 $this->jeopardy();
                 break;
+            case "start":
+                $this->start();
+                break;
             case "over":
                 $this->over();
                 break;
@@ -35,10 +38,57 @@ class JeopardyController
         }
     }
 
+    private function loadJeopardy()
+    {
+        $data = $this->db->query("select id, question, answer from question order by rand() limit 1;");
+        if (!isset($data[0])) {
+            die("No questions in the database");
+        }
+        $question = $data[0];
+        return $question;
+    }
+
+    // automatic questions
+    private function jeopardy()
+    {
+        $question = $this->loadJeopardy();
+        $this->logger->debug("Loaded question", $question);
+
+        $user = [
+            "name" => $_SESSION["name"],
+            "email" => $_SESSION["email"],
+            "score" => $_SESSION["score"]
+        ];
+
+        $message = "";
+        if (isset($_POST["answer"])) {
+            $answer = $_POST["answer"];
+            // look up the question that the user answered
+            $data = $this->db->query("select answer from question where id = ?;", "i", $_POST["questionid"]);
+            if ($data === false) {
+                $message = "<div class='alert alert-danger'>An error occurred</div>";
+            } else if (!isset($data[0])) {
+                $message = "<div class='alert alert-danger'>That question didn't exist</div>";
+            } else if ($data[0]["answer"] == $_POST["answer"]) {
+                $message = "<div class='alert alert-success'><b>$answer</b> was correct!</div>";
+
+                // whatever the score value of that question was, add it to user score
+                $user["score"] += $_POST["score"];
+                $this->db->query("update user set score = ? where email = ?;", "is", $user["score"], $user["email"]);
+            } else {
+                $message = "<div class='alert alert-danger'><b>$answer</b> was incorrect.  The correct was {$data[0]["answer"]}.</div>";
+            }
+        }
+        include("templates/jeopardy.php");
+    }
+
     private function login()
     {
-
         if (isset($_POST["email"], $_POST["name"], $_POST["password"]) && !empty($_POST["email"])  && !empty($_POST["name"])  && !empty($_POST["password"])) { /// validate the email coming in
+            // regex - get working in OH
+            if (!preg_match("/^[a-z][a-z][a-z]?[0-9][a-z][a-z]?[a-z]?@virginia.edu$/", $_POST["email"])) {
+                $error_msg = "Submit a valid email.";
+            }
             $data = $this->db->query("select * from user where email = ?;", "s", $_POST["email"]);
 
             if ($data === false) {
@@ -64,7 +114,6 @@ class JeopardyController
                     $_SESSION["name"] = $data[0]["name"];
                     $_SESSION["email"] = $data[0]["email"];
                     $_SESSION["id"] = $data[0]["id"];
-
                     header("Location: ?command=add");
                 } else {
                     $error_msg = "Wrong password";
@@ -74,7 +123,7 @@ class JeopardyController
         include("templates/login.php");
     }
 
-    private function jeopardy()
+    private function start()
     {
         if (!isset($_SESSION)) {
             session_start();
@@ -92,16 +141,15 @@ class JeopardyController
         $newHS = "true"; // change this back to false
         $topics = [];
         if (isset($_SESSION["id"])) {
-            $data = $this->db->query("select high_score from user where id = ?;", "i", $_SESSION["id"]); 
-             if ($score > $data[0]["high_score"]) {
+            $data = $this->db->query("select high_score from user where id = ?;", "i", $_SESSION["id"]);
+            if ($score > $data[0]["high_score"]) {
                 $this->db->query("update user set high_score = ? where id = ?;", "ii", $score, $_SESSION["id"]);
                 $newHS = "false";
-             }
+            }
             $topics = $this->db->query("select * from topic where user_id = ?;", "i", $_SESSION["id"]);
         }
 
         if (isset($_POST["newHS"])) {
-            
         }
         include("templates/over.php");
     }
@@ -129,7 +177,7 @@ class JeopardyController
             session_start();
         }
         if (isset($_POST["top"])) { // if the user submitted a topic and questions
-            $this->db->query("insert into topic (topic_name, user_id) values (?, ?);", "si", $_POST["top"], $_SESSION["id"]); 
+            $this->db->query("insert into topic (topic_name, user_id) values (?, ?);", "si", $_POST["top"], $_SESSION["id"]);
             $tid = $this->db->getInsertId();
             $this->db->query("insert into question (question, answer, topic_id) values (?, ?, ?);", "ssi", $_POST["q1"], $_POST["a1"], $tid);
             $this->db->query("insert into question (question, answer, topic_id) values (?, ?, ?);", "ssi", $_POST["q2"], $_POST["a2"], $tid);

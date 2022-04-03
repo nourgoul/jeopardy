@@ -83,7 +83,7 @@
                         <input type="text" id="a10" name="a10"><br><br>
                     </div>
                     <button type="submit" class="btn btn-primary sub-button">Submit</button>
-                    <a class="btn btn-success" href="?command=jeopardy">Start Game</a>
+                    <a class="btn btn-success" href="?command=start">Start Game</a>
                 </form>
             </div>
         </section>
