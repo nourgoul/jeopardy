@@ -20,6 +20,7 @@
     if ($command == "add" && !isset($_SESSION["id"])) { // users that aren't logged in can't add new questions
         $command = "landing";
     }
+    // if not set score, dont let them see game over screen
 
     $game = new JeopardyController($command);
     $game->run();

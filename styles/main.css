@@ -239,3 +239,34 @@ h1.gameOver {
     text-align: center;
     font-weight: bold;
 }
+
+h2.gameOver {
+    font-size: 36px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    margin-top:10px;
+}
+
+h3.gameOver {
+    font-size: 24px;
+    color: yellow;
+    text-align: center;
+    font-weight: bold;
+    margin-top:10px;
+}
+
+h5.gameOver {
+    font-size: 24px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+
+label.gameOver {
+    font-size: 32px;
+    color: white;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+}

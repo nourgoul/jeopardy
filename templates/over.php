@@ -37,18 +37,34 @@
             </div>
             <div class="row">
                 <div class="col-xs-8 mx-auto">
-                <form action="?command=question" method="post">
+                <form action="?command=over" method="post">
                     <div class="h-100 p-5 bg-dark border rounded-3">
                     <h1 class = "gameOver">Game Over</h1>
-                    <p>quedjede</p>
+                    <h2 class = "gameOver">Score: <?=$score?></h2>
+                    <?php
+                        if ($newHS === "true") {
+                            echo '<h3 class = "gameOver">NEW PERSONAL HIGH SCORE!</h3>';
+                        }
+                    ?>
                     </div>
-                    <div class="h-10 p-5 mb-3">
-                        <input type="text" class="form-control" id="answer" name="answer" placeholder="Type your answer here">
+                    <div class="h-100 p-5 mt-4 mb-4 bg-dark border rounded-3">
+                    <h5 class = "gameOver">Select Topics You Wish To Delete</h5>
+                    <?php
+                        if (count($topics) !== 0) {
+                            for ($i = 0; $i < count($topics); $i++) {
+                                echo '<input type="checkbox" id="' . $topics[$i]["id"] . '" name="' . $topics[$i]["id"] . '" value="' . $topics[$i]["topic_name"] . '">';
+                                echo '<label class = "gameOver" for="' . $topics[$i]["id"] . '">' . $topics[$i]["topic_name"] . '</label><br>';
+                            }
+                        }
+                    ?>
                     </div>
                     <div class="text-center">      
-                    <input type="hidden" name="questionid" value="NEWHS HERE">          
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                    <a href="?command=logout" class="btn btn-danger">End Game</a>
+                        <?php
+                            echo '<input type="hidden" name="newHS" value="' . $newHS . '">'; // check this for POST submission and also to display newHS message corectly
+                        ?>         
+                        <button type="submit" class="btn btn-warning">Delete Selected</button>
+                        <a href="?command=jeopardy" class="btn btn-success">Play Again</a>
+                        <a href="?command=logout" class="btn btn-danger">Log Out</a>
                     </div>
                 </form>
                 </div>

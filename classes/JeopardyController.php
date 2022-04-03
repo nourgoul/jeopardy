@@ -89,10 +89,15 @@ class JeopardyController
         }
         // Implement game over template and functionality
         $score = 1000; // REPLACE THIS WITH SCORE SESSION VARIABLE
-        $newHS = false;
+        $newHS = "true"; // change this back to false
+        $topics = [];
         if (isset($_SESSION["id"])) {
             $data = $this->db->query("select high_score from user where id = ?;", "i", $_SESSION["id"]); 
-            $newHS = $score > $data[0]["high_score"];
+             if ($score > $data[0]["high_score"]) {
+                $this->db->query("update user set high_score = ? where id = ?;", "ii", $score, $_SESSION["id"]);
+                $newHS = "false";
+             }
+            $topics = $this->db->query("select * from topic where user_id = ?;", "i", $_SESSION["id"]);
         }
         include("templates/over.php");
     }
