@@ -49,7 +49,7 @@
                         <input type="password" class="form-control" id="password" name="password" />
                     </div>
                     <div class="d-flex justify-content-center" style="margin-top:15px">
-                    <button type="submit" class="btn btn-primary">Get Started</button>
+                        <button type="submit" class="btn btn-primary">Get Started</button>
                     </div>
                 </form>
             </div>

@@ -1,7 +1,7 @@
 <?php
     /**
      * Jeopardy Game Project
-     * 
+     * Helped by: Selena Johnson (Scj4ve)
      */
 
     spl_autoload_register(function ($classname) {

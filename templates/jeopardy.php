@@ -27,7 +27,8 @@
     <div class="container row">
         <div class="col-10 container">
             <!-- game name -->
-            <h1 class="h1">Hello, <?=$_SESSION["name"]?>.</h1>
+<!--            <h1 class="h1">Hello, <?=$_SESSION["name"]?>.</h1> -->
+<h1 class="h1">Hello, PLAYER.</h1>
             <h1 class="h1 text-center">JEOPARDY</h1>
 
             <!-- topic names -->        
@@ -38,54 +39,61 @@
                 <div class="topic btn btn-fix text-center col-2"><div class="well card-box bg-blue"><h4>Topic 3</h4></div></div>
                 <div class="topic btn btn-fix text-center col-2"><div class="well card-box bg-blue"><h4>Topic 4</h4></div></div>
                 <div class="topic btn btn-fix text-center col-2"><div class="well card-box bg-blue"><h4>Topic 5</h4></div></div>
-
             </div>
 
-
-
-            <!-- actual buttons -->
-            <!-- row 1 -->
+            <!-- API Question not showing up -->
+            <form action="?command=jeopardy" method="post">
             <div class="row">
-                <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card"><div class="well card-box bg-blue"><p>Card 1</p></div></a>
-                <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card"><div class="well card-box bg-blue"><p>Card 2</p></div></a>
-                <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card"><div class="well card-box bg-blue"><p>Card 3</p></div></a>
-                <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card"><div class="well card-box bg-blue"><p>Card 4</p></div></a>
-                <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card"><div class="well card-box bg-blue"><p>Card 5</p></div></a>
-            </div>
-
-            <div class="row">
-                <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card"><div class="well card-box bg-blue"><p>Card 1</p></div></a>
-                <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card"><div class="well card-box bg-blue"><p>Card 2</p></div></a>
-                <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card"><div class="well card-box bg-blue"><p>Card 3</p></div></a>
-                <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card"><div class="well card-box bg-blue"><p>Card 4</p></div></a>
-                <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card"><div class="well card-box bg-blue"><p>Card 5</p></div></a>
-            </div>
-
-            <div class="row">
-                <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card"><div class="well card-box bg-blue"><p>Card 1</p></div></a>
-                <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card"><div class="well card-box bg-blue"><p>Card 2</p></div></a>
-                <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card"><div class="well card-box bg-blue"><p>Card 3</p></div></a>
-                <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card"><div class="well card-box bg-blue"><p>Card 4</p></div></a>
-                <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card"><div class="well card-box bg-blue"><p>Card 5</p></div></a>
+                <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card"><div class="well card-box bg-blue">
+                    <p>$<?=$question["question"];?></p>
+                </div></a>
+                <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card"><div class="well card-box bg-blue">
+                    <p>$<?=$question["question"];?></p>
+                </div></a>
+                <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card"><div class="well card-box bg-blue">
+                    <p>$<?=$question["question"];?></p>
+                </div></a>
+                <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card"><div class="well card-box bg-blue">
+                    <p>$<?=$question["question"];?></p>
+                </div></a>
+                <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card"><div class="well card-box bg-blue">
+                    <p>$<?=$question["question"];?></p>
+                </div></a>
+                </form>
             </div>
 
             <div class="row">
-                <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card"><div class="well card-box bg-blue"><p>Card 1</p></div></a>
-                <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card"><div class="well card-box bg-blue"><p>Card 2</p></div></a>
-                <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card"><div class="well card-box bg-blue"><p>Card 3</p></div></a>
-                <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card"><div class="well card-box bg-blue"><p>Card 4</p></div></a>
-                <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card"><div class="well card-box bg-blue"><p>Card 5</p></div></a>
+                <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card"><div class="well card-box bg-blue"><p>$400</p></div></a>
+                <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card"><div class="well card-box bg-blue"><p>$400</p></div></a>
+                <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card"><div class="well card-box bg-blue"><p>$400</p></div></a>
+                <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card"><div class="well card-box bg-blue"><p>$400</p></div></a>
+                <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card"><div class="well card-box bg-blue"><p>$400</p></div></a>
             </div>
 
             <div class="row">
-                <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card"><div class="well card-box bg-blue"><p>Card 1</p></div></a>
-                <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card"><div class="well card-box bg-blue"><p>Card 2</p></div></a>
-                <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card"><div class="well card-box bg-blue"><p>Card 3</p></div></a>
-                <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card"><div class="well card-box bg-blue"><p>Card 4</p></div></a>
-                <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card"><div class="well card-box bg-blue"><p>Card 5</p></div></a>
+                <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card"><div class="well card-box bg-blue"><p>$600</p></div></a>
+                <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card"><div class="well card-box bg-blue"><p>$600</p></div></a>
+                <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card"><div class="well card-box bg-blue"><p>$600</p></div></a>
+                <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card"><div class="well card-box bg-blue"><p>$600</p></div></a>
+                <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card"><div class="well card-box bg-blue"><p>$600</p></div></a>
             </div>
 
-        </div>        
+            <div class="row">
+                <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card"><div class="well card-box bg-blue"><p>$800</p></div></a>
+                <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card"><div class="well card-box bg-blue"><p>$800</p></div></a>
+                <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card"><div class="well card-box bg-blue"><p>$800</p></div></a>
+                <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card"><div class="well card-box bg-blue"><p>$800</p></div></a>
+                <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card"><div class="well card-box bg-blue"><p>$800</p></div></a>
+            </div>
+
+            <div class="row">
+                <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card"><div class="well card-box bg-blue"><p>$1000</p></div></a>
+                <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card"><div class="well card-box bg-blue"><p>$1000</p></div></a>
+                <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card"><div class="well card-box bg-blue"><p>$1000</p></div></a>
+                <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card"><div class="well card-box bg-blue"><p>$1000</p></div></a>
+                <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card"><div class="well card-box bg-blue"><p>$1000</p></div></a>
+            </div>
+        </div>    
         <!-- scores and stuff -->
         <div class="score col-2">
             <h1>Score: 500</h1>
