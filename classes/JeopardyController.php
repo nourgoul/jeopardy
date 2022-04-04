@@ -15,18 +15,22 @@ class JeopardyController
     public function run()
     {
         switch ($this->command) {
+            // Jeopardy game - questions
             case "jeopardy":
                 $this->jeopardy();
                 break;
+            // Start session
             case "start":
                 $this->start();
                 break;
+            // Game over
             case "over":
                 $this->over();
                 break;
             case "login":
                 $this->login();
                 break;
+            // Add cateogry
             case "add":
                 $this->add();
                 break;
