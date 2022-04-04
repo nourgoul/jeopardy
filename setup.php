@@ -6,6 +6,7 @@ spl_autoload_register(function ($classname) {
 mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 $db = new mysqli(Config::$db["host"], Config::$db["user"], Config::$db["pass"], Config::$db["database"]);
 
+// Jeopardy questions go into "questions" table
 $triviaData = json_decode(file_get_contents("https://opentdb.com/api.php?amount=50"), true);
 
 print_r($triviaData);

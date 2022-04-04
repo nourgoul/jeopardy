@@ -42,6 +42,7 @@ class JeopardyController
         }
     }
 
+    // Load jeopardy question
     private function loadJeopardy()
     {
         $data = $this->db->query("select id, question, answer from question order by rand() limit 1;");
@@ -52,11 +53,13 @@ class JeopardyController
         return $question;
     }
 
-    // automatic questions
+    // Jeopardy question function
     private function jeopardy()
     {
         $question = $this->loadJeopardy();
-        $this->logger->debug("Loaded question", $question);
+        if ($question == null) {
+            die("No questions available");
+        }
 
         $user = [
             "name" => $_SESSION["name"],
@@ -77,7 +80,7 @@ class JeopardyController
                 $message = "<div class='alert alert-success'><b>$answer</b> was correct!</div>";
 
                 // whatever the score value of that question was, add it to user score
-                $user["score"] += $_POST["score"];
+//                $user["score"] += $_POST["score"];
                 $this->db->query("update user set score = ? where email = ?;", "is", $user["score"], $user["email"]);
             } else {
                 $message = "<div class='alert alert-danger'><b>$answer</b> was incorrect.  The correct was {$data[0]["answer"]}.</div>";
@@ -89,10 +92,11 @@ class JeopardyController
     private function login()
     {
         if (isset($_POST["email"], $_POST["name"], $_POST["password"]) && !empty($_POST["email"])  && !empty($_POST["name"])  && !empty($_POST["password"])) { /// validate the email coming in
-            // regex - get working in OH
-            if (!preg_match("/^[a-z][a-z][a-z]?[0-9][a-z][a-z]?[a-z]?@virginia.edu$/", $_POST["email"])) {
+            // REGEX - working
+            if (preg_match("/^[a-z][a-z][a-z]?[0-9][a-z][a-z]?[a-z]?@virginia.edu$/", $_POST["email"]) === 0) {
                 $error_msg = "Submit a valid email.";
-            }
+                header("Location: ?command=login");
+            } else {
             $data = $this->db->query("select * from user where email = ?;", "s", $_POST["email"]);
 
             if ($data === false) {
@@ -124,6 +128,7 @@ class JeopardyController
                 }
             }
         }
+    }
         include("templates/login.php");
     }
 
