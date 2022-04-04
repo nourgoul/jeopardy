@@ -49,7 +49,8 @@ class JeopardyController
         if (!isset($data[0])) {
             die("No questions in the database");
         }
-        $question = $data[0];
+        $rand = rand(1, count($data)-1);
+        $question = $data[$rand];
         return $question;
     }
 
@@ -71,18 +72,17 @@ class JeopardyController
     }
 
         $message = "";
+        $_SESSION["score"] = 0;
         if (isset($_POST["answer"])) {
             $answer = $_POST["answer"];
             // look up the question that the user answered
-            $data = $this->db->query("select answer from question where id = ?;", "i", $_POST["questionid"]);
+            $data = $this->db->query("select answer from question where id = ?; FOR JSON AUTO", "i", $_POST["questionid"]);
             if ($data === false) {
                 $message = "<div class='alert alert-danger'>An error occurred</div>";
             } else if (!isset($data[0])) {
                 $message = "<div class='alert alert-danger'>That question didn't exist</div>";
             } else if ($data[0]["answer"] == $_POST["answer"]) {
                 $message = "<div class='alert alert-success'><b>$answer</b> was correct!</div>";
-
-                // whatever the score value of that question was, add it to user score
 //                $user["score"] += $_POST["score"];
                 $this->db->query("update user set score = ? where email = ?;", "is", $user["score"], $user["email"]);
             } else {
@@ -94,9 +94,9 @@ class JeopardyController
 
     private function login()
     {
-        if (isset($_POST["email"], $_POST["name"], $_POST["password"]) && !empty($_POST["email"])  && !empty($_POST["name"])  && !empty($_POST["password"])) { /// validate the email coming in
-            // REGEX - working
-            if (preg_match("/^[a-z][a-z][a-z]?[0-9][a-z][a-z]?[a-z]?@virginia.edu$/", $_POST["email"]) === 0) {
+        if (isset($_POST["email"], $_POST["name"], $_POST["password"]) && !empty($_POST["email"])  && !empty($_POST["name"])  && !empty($_POST["password"])) {
+            // REGEX
+            if (preg_match("/^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/", $_POST["email"]) === 0) {
                 $error_msg = "Submit a valid email.";
                 header("Location: ?command=login");
             } else {

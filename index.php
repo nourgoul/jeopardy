@@ -2,6 +2,7 @@
     /**
      * Jeopardy Game Project
      * Helped by: Selena Johnson (Scj4ve)
+     * https://www.sqlshack.com/convert-sql-server-results-json/
      */
 
     spl_autoload_register(function ($classname) {

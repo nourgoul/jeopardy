@@ -72,27 +72,27 @@
                 <div class="row">
                     <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card">
                         <div class="well card-box bg-blue">
-                            <p><?= $question["question"]; ?></p>
+                            <p class="boxes"><?=$question["question"]; ?></p>
                         </div>
                     </a>
                     <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card">
                         <div class="well card-box bg-blue">
-                            <p><?= $question["question"]; ?></p>
+                        <p class="boxes"><?=$question["question"]; ?></p>
                         </div>
                     </a>
                     <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card">
                         <div class="well card-box bg-blue">
-                            <p><?= $question["question"]; ?></p>
+                        <p class="boxes"><?=$question["question"]; ?></p>
                         </div>
                     </a>
                     <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card">
                         <div class="well card-box bg-blue">
-                            <p><?= $question["question"]; ?></p>
+                        <p class="boxes"><?=$question["question"]; ?></p>
                         </div>
                     </a>
                     <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card">
                         <div class="well card-box bg-blue">
-                            <p><?= $question["question"]; ?></p>
+                        <p class="boxes"><?=$question["question"]; ?></p>
                         </div>
                     </a>
             </form>
@@ -102,27 +102,27 @@
             <div class="row">
                 <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card">
                     <div class="well card-box bg-blue">
-                        <p><?= $question["question"]; ?></p>
+                    <p class="boxes"><?=$question["question"]; ?></p>
                     </div>
                 </a>
                 <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card">
                     <div class="well card-box bg-blue">
-                        <p><?= $question["question"]; ?></p>
+                    <p class="boxes"><?=$question["question"]; ?></p>
                     </div>
                 </a>
                 <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card">
                     <div class="well card-box bg-blue">
-                        <p><?= $question["question"]; ?></p>
+                    <p class="boxes"><?=$question["question"]; ?></p>
                     </div>
                 </a>
                 <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card">
                     <div class="well card-box bg-blue">
-                        <p><?= $question["question"]; ?></p>
+                    <p class="boxes"><?=$question["question"]; ?></p>
                     </div>
                 </a>
                 <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card">
                     <div class="well card-box bg-blue">
-                        <p><?= $question["question"]; ?></p>
+                    <p class="boxes"><?=$question["question"]; ?></p>
                     </div>
                 </a>
         </form>
@@ -132,57 +132,27 @@
         <div class="row">
             <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card">
                 <div class="well card-box bg-blue">
-                    <p><?= $question["question"]; ?></p>
+                <p class="boxes"><?=$question["question"]; ?></p>
                 </div>
             </a>
             <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card">
                 <div class="well card-box bg-blue">
-                    <p><?= $question["question"]; ?></p>
+                <p class="boxes"><?=$question["question"]; ?></p>
                 </div>
             </a>
             <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card">
                 <div class="well card-box bg-blue">
-                    <p><?= $question["question"]; ?></p>
+                <p class="boxes"><?=$question["question"]; ?></p>
                 </div>
             </a>
             <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card">
                 <div class="well card-box bg-blue">
-                    <p><?= $question["question"]; ?></p>
+                <p class="boxes"><?=$question["question"]; ?></p>
                 </div>
             </a>
             <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card">
                 <div class="well card-box bg-blue">
-                    <p><?= $question["question"]; ?></p>
-                </div>
-            </a>
-    </form>
-    </div>
-
-    <form action="?command=jeopardy" method="post">
-        <div class="row">
-            <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card">
-                <div class="well card-box bg-blue">
-                    <p><?= $question["question"]; ?></p>
-                </div>
-            </a>
-            <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card">
-                <div class="well card-box bg-blue">
-                    <p><?= $question["question"]; ?></p>
-                </div>
-            </a>
-            <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card">
-                <div class="well card-box bg-blue">
-                    <p><?= $question["question"]; ?></p>
-                </div>
-            </a>
-            <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card">
-                <div class="well card-box bg-blue">
-                    <p><?= $question["question"]; ?></p>
-                </div>
-            </a>
-            <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card">
-                <div class="well card-box bg-blue">
-                    <p><?= $question["question"]; ?></p>
+                <p class="boxes"><?=$question["question"]; ?></p>
                 </div>
             </a>
     </form>
@@ -192,27 +162,57 @@
         <div class="row">
             <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card">
                 <div class="well card-box bg-blue">
-                    <p><?= $question["question"]; ?></p>
+                <p class="boxes"><?=$question["question"]; ?></p>
                 </div>
             </a>
             <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card">
                 <div class="well card-box bg-blue">
-                    <p><?= $question["question"]; ?></p>
+                <p class="boxes"><?=$question["question"]; ?></p>
                 </div>
             </a>
             <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card">
                 <div class="well card-box bg-blue">
-                    <p><?= $question["question"]; ?></p>
+                <p class="boxes"><?=$question["question"]; ?></p>
                 </div>
             </a>
             <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card">
                 <div class="well card-box bg-blue">
-                    <p><?= $question["question"]; ?></p>
+                <p class="boxes"><?=$question["question"]; ?></p>
                 </div>
             </a>
             <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card">
                 <div class="well card-box bg-blue">
-                    <p><?= $question["question"]; ?></p>
+                <p class="boxes"><?=$question["question"]; ?></p>
+                </div>
+            </a>
+    </form>
+    </div>
+
+    <form action="?command=jeopardy" method="post">
+        <div class="row">
+            <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card">
+                <div class="well card-box bg-blue">
+                <p class="boxes"><?=$question["question"]; ?></p>
+                </div>
+            </a>
+            <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card">
+                <div class="well card-box bg-blue">
+                <p class="boxes"><?=$question["question"]; ?></p>
+                </div>
+            </a>
+            <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card">
+                <div class="well card-box bg-blue">
+                <p class="boxes"><?=$question["question"]; ?></p>
+                </div>
+            </a>
+            <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card">
+                <div class="well card-box bg-blue">
+                <p class="boxes"><?=$question["question"]; ?></p>
+                </div>
+            </a>
+            <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card">
+                <div class="well card-box bg-blue">
+                <p class="boxes"><?=$question["question"]; ?></p>
                 </div>
             </a>
     </form>
@@ -220,7 +220,11 @@
     </div>
     <!-- scores and stuff -->
     <div class="score col-2">
-        <h1>Score: 0</h1>
+        <h1>Score: 
+            <?= // Actual score var
+            $_SESSION["score"]
+            ?>
+        </h1>
 
         <div class="exit">
             <a class="btn btn-danger" href="?command=over">End Game</a>
