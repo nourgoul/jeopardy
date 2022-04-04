@@ -45,7 +45,7 @@ class JeopardyController
     // Load jeopardy question
     private function loadJeopardy()
     {
-        $data = $this->db->query("select id, question, answer from question order by rand() limit 1;");
+        $data = $this->db->query("select id, question, answer from question order by rand();");
         if (!isset($data[0])) {
             die("No questions in the database");
         }
@@ -56,16 +56,19 @@ class JeopardyController
     // Jeopardy question function
     private function jeopardy()
     {
+        
         $question = $this->loadJeopardy();
         if ($question == null) {
             die("No questions available");
         }
 
+        if (isset($_POST["email"], $_POST["name"], $_POST["password"]) && !empty($_POST["email"])  && !empty($_POST["name"])  && !empty($_POST["password"])) {
         $user = [
             "name" => $_SESSION["name"],
             "email" => $_SESSION["email"],
             "score" => $_SESSION["score"]
         ];
+    }
 
         $message = "";
         if (isset($_POST["answer"])) {
@@ -137,7 +140,8 @@ class JeopardyController
         if (!isset($_SESSION)) {
             session_start();
         }
-        include("templates/jeopardy.php");
+//        include("templates/jeopardy.php");
+        header("Location: ?command=jeopardy");
     }
 
     private function over()
