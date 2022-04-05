@@ -1,7 +1,7 @@
 <?php
     /**
      * Jeopardy Game Project
-     * Helped by: Selena Johnson (Scj4ve)
+     * Helped by: Selena Johnson and Coby Chiu (Scj4ve and cc6hkb) on Jeopardy Controller
      * https://www.sqlshack.com/convert-sql-server-results-json/
      */
 
