@@ -39,48 +39,28 @@
                     <label for="top">Topic Name:</label>
                     <input type="text" id="top" name="top" required><br><br>
                     <div class="col-6 add-form">
-                        <label for="q1">Question 1:</label>
+                        <label for="q1">Question 1 (200 points):</label>
                         <input type="text" id="q1" name="q1" required><br><br>
-                        <label for="q2">Question 2:</label>
+                        <label for="q2">Question 2 (400 points):</label>
                         <input type="text" id="q2" name="q2" required><br><br>
-                        <label for="q3">Question 3:</label>
+                        <label for="q3">Question 3 (600 points):</label>
                         <input type="text" id="q3" name="q3" required><br><br>
-                        <label for="q4">Question 4:</label>
+                        <label for="q4">Question 4 (800 points):</label>
                         <input type="text" id="q4" name="q4" required><br><br>
-                        <label for="q5">Question 5:</label>
+                        <label for="q5">Question 5 (1000 points):</label>
                         <input type="text" id="q5" name="q5" required><br><br>
-                        <label for="q6">Question 6:</label>
-                        <input type="text" id="q6" name="q6"><br><br>
-                        <label for="q7">Question 7:</label>
-                        <input type="text" id="q7" name="q7"><br><br>
-                        <label for="q8">Question 8:</label>
-                        <input type="text" id="q8" name="q8"><br><br>
-                        <label for="q9">Question 9:</label>
-                        <input type="text" id="q9" name="q9"><br><br>
-                        <label for="q10">Question 10:</label>
-                        <input type="text" id="q10" name="q10"><br><br>
                     </div>
                     <div class="col-6 add-form">
-                        <label for="a1">Answer 1:</label>
+                        <label for="a1">Answer 1 (200 points):</label>
                         <input type="text" id="a1" name="a1" required><br><br>
-                        <label for="a2">Answer 2:</label>
+                        <label for="a2">Answer 2 (400 points):</label>
                         <input type="text" id="a2" name="a2" required><br><br>
-                        <label for="a3">Answer 3:</label>
+                        <label for="a3">Answer 3 (600 points):</label>
                         <input type="text" id="a3" name="a3" required><br><br>
-                        <label for="a4">Answer 4:</label>
+                        <label for="a4">Answer 4 (800 points):</label>
                         <input type="text" id="a4" name="a4" required><br><br>
-                        <label for="a5">Answer 5:</label>
+                        <label for="a5">Answer 5 (1000 points):</label>
                         <input type="text" id="a5" name="a5" required><br><br>
-                        <label for="a6">Answer 6:</label>
-                        <input type="text" id="a6" name="a6"><br><br>
-                        <label for="a7">Answer 7:</label>
-                        <input type="text" id="a7" name="a7"><br><br>
-                        <label for="a8">Answer 8:</label>
-                        <input type="text" id="a8" name="a8"><br><br>
-                        <label for="a9">Answer 9:</label>
-                        <input type="text" id="a9" name="a9"><br><br>
-                        <label for="a10">Answer 10:</label>
-                        <input type="text" id="a10" name="a10"><br><br>
                     </div>
                     <button type="submit" class="btn btn-primary sub-button">Submit</button>
                     <a class="btn btn-success" href="?command=start">Start Game</a>

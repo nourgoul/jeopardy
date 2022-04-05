@@ -150,8 +150,8 @@ class JeopardyController
             session_start();
         }
         // Implement game over template and functionality
-        $score = 1000; // REPLACE THIS WITH SCORE SESSION VARIABLE
-        $newHS = "true"; // change this back to false
+        $score = $_SESSION["score"]; // REPLACE THIS WITH SCORE SESSION VARIABLE -- done
+        $newHS = "false"; // change this back to false -- done
         $topics = [];
         if (isset($_SESSION["id"])) {
             $data = $this->db->query("select high_score from user where id = ?;", "i", $_SESSION["id"]);
@@ -203,21 +203,6 @@ class JeopardyController
             $this->db->query("insert into question (question, answer, topic_id) values (?, ?, ?);", "ssi", $_POST["q3"], $_POST["a3"], $tid);
             $this->db->query("insert into question (question, answer, topic_id) values (?, ?, ?);", "ssi", $_POST["q4"], $_POST["a4"], $tid);
             $this->db->query("insert into question (question, answer, topic_id) values (?, ?, ?);", "ssi", $_POST["q5"], $_POST["a5"], $tid);
-            if ($_POST["q6"] !== "" && $_POST["a6"] !== "") { // check before inserting each optional question-answer pairing
-                $this->db->query("insert into question (question, answer, topic_id) values (?, ?, ?);", "ssi", $_POST["q6"], $_POST["a6"], $tid);
-            }
-            if ($_POST["q7"] !== "" && $_POST["a7"] !== "") { // check before inserting each optional question-answer pairing
-                $this->db->query("insert into question (question, answer, topic_id) values (?, ?, ?);", "ssi", $_POST["q7"], $_POST["a7"], $tid);
-            }
-            if ($_POST["q8"] !== "" && $_POST["a8"] !== "") { // check before inserting each optional question-answer pairing
-                $this->db->query("insert into question (question, answer, topic_id) values (?, ?, ?);", "ssi", $_POST["q8"], $_POST["a8"], $tid);
-            }
-            if ($_POST["q9"] !== "" && $_POST["a9"] !== "") { // check before inserting each optional question-answer pairing
-                $this->db->query("insert into question (question, answer, topic_id) values (?, ?, ?);", "ssi", $_POST["q9"], $_POST["a9"], $tid);
-            }
-            if ($_POST["q10"] !== "" && $_POST["a10"] !== "") { // check before inserting each optional question-answer pairing
-                $this->db->query("insert into question (question, answer, topic_id) values (?, ?, ?);", "ssi", $_POST["q10"], $_POST["a10"], $tid);
-            }
         }
         include("templates/add.php");
     }
