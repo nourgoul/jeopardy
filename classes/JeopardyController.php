@@ -198,11 +198,11 @@ class JeopardyController
         if (isset($_POST["top"])) { // if the user submitted a topic and questions
             $this->db->query("insert into topic (topic_name, user_id) values (?, ?);", "si", $_POST["top"], $_SESSION["id"]);
             $tid = $this->db->getInsertId();
-            $this->db->query("insert into question (question, answer, topic_id) values (?, ?, ?);", "ssi", $_POST["q1"], $_POST["a1"], $tid);
-            $this->db->query("insert into question (question, answer, topic_id) values (?, ?, ?);", "ssi", $_POST["q2"], $_POST["a2"], $tid);
-            $this->db->query("insert into question (question, answer, topic_id) values (?, ?, ?);", "ssi", $_POST["q3"], $_POST["a3"], $tid);
-            $this->db->query("insert into question (question, answer, topic_id) values (?, ?, ?);", "ssi", $_POST["q4"], $_POST["a4"], $tid);
-            $this->db->query("insert into question (question, answer, topic_id) values (?, ?, ?);", "ssi", $_POST["q5"], $_POST["a5"], $tid);
+            $this->db->query("insert into question (question, answer, value, topic_id) values (?, ?, ?, ?);", "ssii", $_POST["q1"], $_POST["a1"], 200, $tid);
+            $this->db->query("insert into question (question, answer, value, topic_id) values (?, ?, ?, ?);", "ssii", $_POST["q2"], $_POST["a2"], 400, $tid);
+            $this->db->query("insert into question (question, answer, value, topic_id) values (?, ?, ?, ?);", "ssii", $_POST["q3"], $_POST["a3"], 600, $tid);
+            $this->db->query("insert into question (question, answer, value, topic_id) values (?, ?, ?, ?);", "ssii", $_POST["q4"], $_POST["a4"], 800, $tid);
+            $this->db->query("insert into question (question, answer, value, topic_id) values (?, ?, ?, ?);", "ssii", $_POST["q5"], $_POST["a5"], 1000, $tid);
         }
         include("templates/add.php");
     }
