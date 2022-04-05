@@ -162,7 +162,9 @@
         <div class="row">
             <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card">
                 <div class="well card-box bg-blue">
-                <p class="boxes"><?=$question["question"]; ?></p>
+                <p class="boxes">
+                    <?=$question["question"]; ?>
+                </p>
                 </div>
             </a>
             <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card">
