@@ -1,2 +1,5 @@
 # DB Connection Info
 Config.php
+
+# Hidden Mac File
+.DS_Store
