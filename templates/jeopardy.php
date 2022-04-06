@@ -29,9 +29,9 @@
         <div class="col-10 container">
             <?php
             if (isset($_SESSION["id"])) { // if logged in
-                echo '<h1 class="h1">Hello, <?=$_SESSION["name"]?>!';
+                echo '<h1 class = "welcome">Hello, ' . $_SESSION["name"] . '!';
             } else { // if not logged in, show login button
-                echo '<h2 class="white">Hello, stranger!</h1>';
+                echo '<h1 class = "welcome">Hello, stranger!</h1>';
             }
             ?>
 
