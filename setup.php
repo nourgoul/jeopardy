@@ -1,4 +1,6 @@
 <?php
+// Christian Riewerts and Nour Goulmamine
+
 spl_autoload_register(function ($classname) {
     include "classes/$classname.php";
 });

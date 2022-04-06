@@ -1,4 +1,5 @@
 <?php
+// Christian Riewerts and Nour Goulmamine
 
 class JeopardyController
 {
