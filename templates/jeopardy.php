@@ -72,27 +72,27 @@
                 <div class="row">
                     <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card">
                         <div class="well card-box bg-blue">
-                            <p class="boxes"><?=$question["question"]; ?></p>
+                            <p class="boxes"><?=$array[0]["question"]; ?></p>
                         </div>
                     </a>
                     <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card">
                         <div class="well card-box bg-blue">
-                        <p class="boxes"><?=$question["question"]; ?></p>
+                        <p class="boxes"><?=$array[1]["question"]; ?></p>
                         </div>
                     </a>
                     <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card">
                         <div class="well card-box bg-blue">
-                        <p class="boxes"><?=$question["question"]; ?></p>
+                        <p class="boxes"><?=$array[2]["question"];?></p>
                         </div>
                     </a>
                     <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card">
                         <div class="well card-box bg-blue">
-                        <p class="boxes"><?=$question["question"]; ?></p>
+                        <p class="boxes"><?=$array[3]["question"]; ?></p>
                         </div>
                     </a>
                     <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card">
                         <div class="well card-box bg-blue">
-                        <p class="boxes"><?=$question["question"]; ?></p>
+                        <p class="boxes"><?=$array[4]["question"]; ?></p>
                         </div>
                     </a>
             </form>
@@ -102,27 +102,27 @@
             <div class="row">
                 <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card">
                     <div class="well card-box bg-blue">
-                    <p class="boxes"><?=$question["question"]; ?></p>
+                    <p class="boxes"><?=$array[5]["question"]; ?></p>
                     </div>
                 </a>
                 <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card">
                     <div class="well card-box bg-blue">
-                    <p class="boxes"><?=$question["question"]; ?></p>
+                    <p class="boxes"><?=$array[6]["question"]; ?></p>
                     </div>
                 </a>
                 <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card">
                     <div class="well card-box bg-blue">
-                    <p class="boxes"><?=$question["question"]; ?></p>
+                    <p class="boxes"><?=$array[7]["question"]; ?></p>
                     </div>
                 </a>
                 <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card">
                     <div class="well card-box bg-blue">
-                    <p class="boxes"><?=$question["question"]; ?></p>
+                    <p class="boxes"><?=$array[8]["question"]; ?></p>
                     </div>
                 </a>
                 <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card">
                     <div class="well card-box bg-blue">
-                    <p class="boxes"><?=$question["question"]; ?></p>
+                    <p class="boxes"><?=$array[9]["question"]; ?></p>
                     </div>
                 </a>
         </form>
@@ -132,27 +132,27 @@
         <div class="row">
             <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card">
                 <div class="well card-box bg-blue">
-                <p class="boxes"><?=$question["question"]; ?></p>
+                <p class="boxes"><?=$array[10]["question"]; ?></p>
                 </div>
             </a>
             <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card">
                 <div class="well card-box bg-blue">
-                <p class="boxes"><?=$question["question"]; ?></p>
+                <p class="boxes"><?=$array[11]["question"]; ?></p>
                 </div>
             </a>
             <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card">
                 <div class="well card-box bg-blue">
-                <p class="boxes"><?=$question["question"]; ?></p>
+                <p class="boxes"><?=$array[12]["question"]; ?></p>
                 </div>
             </a>
             <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card">
                 <div class="well card-box bg-blue">
-                <p class="boxes"><?=$question["question"]; ?></p>
+                <p class="boxes"><?=$array[13]["question"]; ?></p>
                 </div>
             </a>
             <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card">
                 <div class="well card-box bg-blue">
-                <p class="boxes"><?=$question["question"]; ?></p>
+                <p class="boxes"><?=$array[14]["question"]; ?></p>
                 </div>
             </a>
     </form>
@@ -163,28 +163,28 @@
             <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card">
                 <div class="well card-box bg-blue">
                 <p class="boxes">
-                    <?=$question["question"]; ?>
+                    <?=$array[15]["question"]; ?>
                 </p>
                 </div>
             </a>
             <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card">
                 <div class="well card-box bg-blue">
-                <p class="boxes"><?=$question["question"]; ?></p>
+                <p class="boxes"><?=$array[16]["question"]; ?></p>
                 </div>
             </a>
             <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card">
                 <div class="well card-box bg-blue">
-                <p class="boxes"><?=$question["question"]; ?></p>
+                <p class="boxes"><?=$array[17]["question"]; ?></p>
                 </div>
             </a>
             <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card">
                 <div class="well card-box bg-blue">
-                <p class="boxes"><?=$question["question"]; ?></p>
+                <p class="boxes"><?=$array[18]["question"]; ?></p>
                 </div>
             </a>
             <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card">
                 <div class="well card-box bg-blue">
-                <p class="boxes"><?=$question["question"]; ?></p>
+                <p class="boxes"><?=$array[19]["question"]; ?></p>
                 </div>
             </a>
     </form>
@@ -194,27 +194,27 @@
         <div class="row">
             <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card">
                 <div class="well card-box bg-blue">
-                <p class="boxes"><?=$question["question"]; ?></p>
+                <p class="boxes"><?=$array[20]["question"]; ?></p>
                 </div>
             </a>
             <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card">
                 <div class="well card-box bg-blue">
-                <p class="boxes"><?=$question["question"]; ?></p>
+                <p class="boxes"><?=$array[21]["question"]; ?></p>
                 </div>
             </a>
             <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card">
                 <div class="well card-box bg-blue">
-                <p class="boxes"><?=$question["question"]; ?></p>
+                <p class="boxes"><?=$array[22]["question"]; ?></p>
                 </div>
             </a>
             <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card">
                 <div class="well card-box bg-blue">
-                <p class="boxes"><?=$question["question"]; ?></p>
+                <p class="boxes"><?=$array[23]["question"]; ?></p>
                 </div>
             </a>
             <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card">
                 <div class="well card-box bg-blue">
-                <p class="boxes"><?=$question["question"]; ?></p>
+                <p class="boxes"><?=$array[24]["question"]; ?></p>
                 </div>
             </a>
     </form>

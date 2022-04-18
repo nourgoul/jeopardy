@@ -40,7 +40,7 @@ $db->query("create table question (
             );");
 
             // Jeopardy questions go into "questions" table
-$triviaData = json_decode(file_get_contents("https://opentdb.com/api.php?amount=50"), true);
+$triviaData = json_decode(file_get_contents("https://opentdb.com/api.php?amount=100"), true);
 
 print_r($triviaData);
 

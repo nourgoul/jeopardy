@@ -58,10 +58,14 @@ class JeopardyController
     // Jeopardy question function
     private function jeopardy()
     {
-        
+        $array = array();
         $question = $this->loadJeopardy();
         if ($question == null) {
             die("No questions available");
+        }
+        for ($i = 0; $i <= 25; $i++) {
+            $question = $this->loadJeopardy();
+            array_push($array, $question);
         }
 
         if (isset($_POST["email"], $_POST["name"], $_POST["password"]) && !empty($_POST["email"])  && !empty($_POST["name"])  && !empty($_POST["password"])) {
