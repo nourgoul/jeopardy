@@ -68,161 +68,159 @@
             </div>
 
             <!-- API Question not showing up -->
-            <form action="?command=jeopardy" method="post">
+            <div onclick="popUp();">
                 <div class="row">
-                    <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card">
+                    <div class="box btn btn-fix text-center col-2 jeopardy-card">
                         <div class="well card-box bg-blue">
-                            <p class="boxes"><?=$array[0]["question"]; ?></p>
+                            <button class="boxes" id="myBtn">$200</button>
                         </div>
-                    </a>
-                    <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card">
+                    </div>
+                    <div class="box btn btn-fix text-center col-2 jeopardy-card">
                         <div class="well card-box bg-blue">
-                        <p class="boxes"><?=$array[1]["question"]; ?></p>
+                            <button class="boxes" id="myBtn">$200</button>
                         </div>
-                    </a>
-                    <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card">
+                    </div>
+                    <div class="box btn btn-fix text-center col-2 jeopardy-card">
                         <div class="well card-box bg-blue">
-                        <p class="boxes"><?=$array[2]["question"];?></p>
+                            <button class="boxes" id="myBtn">$200</button>
                         </div>
-                    </a>
-                    <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card">
+                    </div>
+                    <div class="box btn btn-fix text-center col-2 jeopardy-card">
                         <div class="well card-box bg-blue">
-                        <p class="boxes"><?=$array[3]["question"]; ?></p>
+                            <button class="boxes" id="myBtn">$200</button>
                         </div>
-                    </a>
-                    <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card">
+                    </div>
+                    <div class="box btn btn-fix text-center col-2 jeopardy-card">
                         <div class="well card-box bg-blue">
-                        <p class="boxes"><?=$array[4]["question"]; ?></p>
+                            <button class="boxes" id="myBtn">$200</button>
                         </div>
-                    </a>
-            </form>
+                    </div>
+        </div>
         </div>
 
-        <form action="?command=jeopardy" method="post">
+        <div onclick="answerQuestion();">
             <div class="row">
-                <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card">
+                <div class="box btn btn-fix text-center col-2 jeopardy-card">
                     <div class="well card-box bg-blue">
-                    <p class="boxes"><?=$array[5]["question"]; ?></p>
+                        <button class="boxes" id="myBtn">$400</button>
                     </div>
-                </a>
-                <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card">
+                </div>
+                <div class="box btn btn-fix text-center col-2 jeopardy-card">
                     <div class="well card-box bg-blue">
-                    <p class="boxes"><?=$array[6]["question"]; ?></p>
+                        <button class="boxes" id="myBtn">$400</button>
                     </div>
-                </a>
-                <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card">
+                </div>
+                <div class="box btn btn-fix text-center col-2 jeopardy-card">
                     <div class="well card-box bg-blue">
-                    <p class="boxes"><?=$array[7]["question"]; ?></p>
+                        <button class="boxes" id="myBtn">$400</button>
                     </div>
-                </a>
-                <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card">
+                </div>
+                <div class="box btn btn-fix text-center col-2 jeopardy-card">
                     <div class="well card-box bg-blue">
-                    <p class="boxes"><?=$array[8]["question"]; ?></p>
+                        <button class="boxes" id="myBtn">$400</button>
                     </div>
-                </a>
-                <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card">
+                </div>
+                <div class="box btn btn-fix text-center col-2 jeopardy-card">
                     <div class="well card-box bg-blue">
-                    <p class="boxes"><?=$array[9]["question"]; ?></p>
+                        <button class="boxes" id="myBtn">$400</button>
                     </div>
-                </a>
-        </form>
+                </div>
+        </div>
     </div>
 
-    <form action="?command=jeopardy" method="post">
+    <div onclick="answerQuestion();">
         <div class="row">
-            <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card">
+            <div class="box btn btn-fix text-center col-2 jeopardy-card">
                 <div class="well card-box bg-blue">
-                <p class="boxes"><?=$array[10]["question"]; ?></p>
+                    <button class="boxes" id="myBtn">$600</button>
                 </div>
-            </a>
-            <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card">
+            </div>
+            <div class="box btn btn-fix text-center col-2 jeopardy-card">
                 <div class="well card-box bg-blue">
-                <p class="boxes"><?=$array[11]["question"]; ?></p>
+                    <button class="boxes" id="myBtn">$600</button>
                 </div>
-            </a>
-            <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card">
+            </div>
+            <div class="box btn btn-fix text-center col-2 jeopardy-card">
                 <div class="well card-box bg-blue">
-                <p class="boxes"><?=$array[12]["question"]; ?></p>
+                    <button class="boxes" id="myBtn">$600</button>
                 </div>
-            </a>
-            <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card">
+            </div>
+            <div class="box btn btn-fix text-center col-2 jeopardy-card">
                 <div class="well card-box bg-blue">
-                <p class="boxes"><?=$array[13]["question"]; ?></p>
+                    <button class="boxes" id="myBtn">$600</button>
                 </div>
-            </a>
-            <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card">
+            </div>
+            <div class="box btn btn-fix text-center col-2 jeopardy-card">
                 <div class="well card-box bg-blue">
-                <p class="boxes"><?=$array[14]["question"]; ?></p>
+                    <button class="boxes" id="myBtn">$600</button>
                 </div>
-            </a>
-    </form>
+            </div>
+        </div>
     </div>
 
-    <form action="?command=jeopardy" method="post">
+    <div onclick="answerQuestion();">
         <div class="row">
-            <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card">
+            <div class="box btn btn-fix text-center col-2 jeopardy-card">
                 <div class="well card-box bg-blue">
-                <p class="boxes">
-                    <?=$array[15]["question"]; ?>
-                </p>
+                    <button class="boxes" id="myBtn">$800</button>
                 </div>
-            </a>
-            <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card">
+            </div>
+            <div class="box btn btn-fix text-center col-2 jeopardy-card">
                 <div class="well card-box bg-blue">
-                <p class="boxes"><?=$array[16]["question"]; ?></p>
+                    <button class="boxes" id="myBtn">$800</button>
                 </div>
-            </a>
-            <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card">
+            </div>
+            <div class="box btn btn-fix text-center col-2 jeopardy-card">
                 <div class="well card-box bg-blue">
-                <p class="boxes"><?=$array[17]["question"]; ?></p>
+                    <button class="boxes" id="myBtn">$800</button>
                 </div>
-            </a>
-            <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card">
+            </div>
+            <div class="box btn btn-fix text-center col-2 jeopardy-card">
                 <div class="well card-box bg-blue">
-                <p class="boxes"><?=$array[18]["question"]; ?></p>
+                    <button class="boxes" id="myBtn">$800</button>
                 </div>
-            </a>
-            <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card">
+            </div>
+            <div class="box btn btn-fix text-center col-2 jeopardy-card">
                 <div class="well card-box bg-blue">
-                <p class="boxes"><?=$array[19]["question"]; ?></p>
+                    <button class="boxes" id="myBtn">$800</button>
                 </div>
-            </a>
-    </form>
+            </div>
+        </div>
     </div>
 
-    <form action="?command=jeopardy" method="post">
+    <form method="post">
         <div class="row">
-            <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card">
+            <div class="box btn btn-fix text-center col-2 jeopardy-card">
                 <div class="well card-box bg-blue">
-                <p class="boxes"><?=$array[20]["question"]; ?></p>
+                    <button class="boxes" id="myBtn">$1000</button>
                 </div>
-            </a>
-            <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card">
+            </div>
+            <div class="box btn btn-fix text-center col-2 jeopardy-card">
                 <div class="well card-box bg-blue">
-                <p class="boxes"><?=$array[21]["question"]; ?></p>
+                    <button class="boxes" id="myBtn">$1000</button>
                 </div>
-            </a>
-            <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card">
+            </div>
+            <div class="box btn btn-fix text-center col-2 jeopardy-card">
                 <div class="well card-box bg-blue">
-                <p class="boxes"><?=$array[22]["question"]; ?></p>
+                    <button class="boxes" id="myBtn">$1000</button>
                 </div>
-            </a>
-            <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card">
+            </div>
+            <div class="box btn btn-fix text-center col-2 jeopardy-card">
                 <div class="well card-box bg-blue">
-                <p class="boxes"><?=$array[23]["question"]; ?></p>
+                    <button class="boxes" id="myBtn">$1000</button>
                 </div>
-            </a>
-            <a href="#" class="box btn btn-fix text-center col-2 jeopardy-card">
+            </div>
+            <div class="box btn btn-fix text-center col-2 jeopardy-card">
                 <div class="well card-box bg-blue">
-                <p class="boxes"><?=$array[24]["question"]; ?></p>
+                    <button class="boxes" id="myBtn">$1000</button>
                 </div>
-            </a>
+            </div>
     </form>
     </div>
     </div>
     <!-- scores and stuff -->
     <div class="score col-2">
-        <h1>Score: 
+        <h1>Score:
             <?= // Actual score var
             $_SESSION["score"]
             ?>
@@ -234,6 +232,44 @@
 
     </div>
     </div>
+
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+        <form class="white" method="post">
+            <label for="guess" class="form-label" style="color:black"><?=$array[0]["question"]; ?></label>
+            <input type="text" class="form-control" id="guess" name="guess" /><br>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        </div>
+
+    </div>
+
+    <script>
+        function popUp() {
+            // Get the modal
+            var modal = document.getElementById("myModal");
+            // Get the button that opens the modal
+            var btn = document.getElementById("myBtn");
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[0];
+            // When the user clicks the button, open the modal 
+            btn.onclick = function() {
+                modal.style.display = "block";
+            }
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() {
+                modal.style.display = "none";
+            }
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+
+        }
+    </script>
 </body>
 
 </html>
