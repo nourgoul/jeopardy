@@ -75,20 +75,34 @@ class JeopardyController
             "score" => $_SESSION["score"]
         ];
     }
-
+/*    
         $message = "";
         $_SESSION["score"] = 0;
         if (isset($_POST["answer"])) {
             $answer = $_POST["answer"];
+            if ($_SESSION["answer"] == strtolower($answer)) {
+                header("Location: ?command=gameOver");
+                // update with real score
+                $user["score"] += 10;
+            } else {
+                $message = "<div class='alert alert-danger'><b>$answer</b> was incorrect.  The correct was {$_SESSION["answer"]}.</div>"; 
+            }
+        }
+        */
+        $message = "";
+        if (isset($_POST["answer"])) {
+            $answer = $_POST["answer"];
             // look up the question that the user answered
-            $data = $this->db->query("select answer from question where id = ?; FOR JSON AUTO", "i", $_POST["questionid"]);
+            $data = $this->db->query("select answer from question where id = ?;", "i", $_POST["id"]);
             if ($data === false) {
                 $message = "<div class='alert alert-danger'>An error occurred</div>";
             } else if (!isset($data[0])) {
                 $message = "<div class='alert alert-danger'>That question didn't exist</div>";
             } else if ($data[0]["answer"] == $_POST["answer"]) {
                 $message = "<div class='alert alert-success'><b>$answer</b> was correct!</div>";
-//                $user["score"] += $_POST["score"];
+                // update user score w/real thing
+                $user["score"] += 10;
+                setcookie("score", $user["score"], time() + 3600);
                 $this->db->query("update user set score = ? where email = ?;", "is", $user["score"], $user["email"]);
             } else {
                 $message = "<div class='alert alert-danger'><b>$answer</b> was incorrect.  The correct was {$data[0]["answer"]}.</div>";
