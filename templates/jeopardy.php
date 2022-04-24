@@ -72,57 +72,27 @@
                 <div class="row">
                     <div class="box btn btn-fix text-center col-2 jeopardy-card">
                         <div class="well card-box bg-blue">
-                            <button class="boxes" id="myBtn">$200</button>
+                            <button class="boxes" id="myBtn1" onclick="disableButton();">$200</button>
                         </div>
                     </div>
                     <div class="box btn btn-fix text-center col-2 jeopardy-card">
                         <div class="well card-box bg-blue">
-                            <button class="boxes" id="myBtn">$200</button>
+                            <button class="boxes" id="myBtn2">$200</button>
                         </div>
                     </div>
                     <div class="box btn btn-fix text-center col-2 jeopardy-card">
                         <div class="well card-box bg-blue">
-                            <button class="boxes" id="myBtn">$200</button>
+                            <button class="boxes" id="myBtn3">$200</button>
                         </div>
                     </div>
                     <div class="box btn btn-fix text-center col-2 jeopardy-card">
                         <div class="well card-box bg-blue">
-                            <button class="boxes" id="myBtn">$200</button>
+                            <button class="boxes" id="myBtn4">$200</button>
                         </div>
                     </div>
                     <div class="box btn btn-fix text-center col-2 jeopardy-card">
                         <div class="well card-box bg-blue">
-                            <button class="boxes" id="myBtn">$200</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div onclick="answerQuestion();">
-                <div class="row">
-                    <div class="box btn btn-fix text-center col-2 jeopardy-card">
-                        <div class="well card-box bg-blue">
-                            <button class="boxes" id="myBtn">$400</button>
-                        </div>
-                    </div>
-                    <div class="box btn btn-fix text-center col-2 jeopardy-card">
-                        <div class="well card-box bg-blue">
-                            <button class="boxes" id="myBtn">$400</button>
-                        </div>
-                    </div>
-                    <div class="box btn btn-fix text-center col-2 jeopardy-card">
-                        <div class="well card-box bg-blue">
-                            <button class="boxes" id="myBtn">$400</button>
-                        </div>
-                    </div>
-                    <div class="box btn btn-fix text-center col-2 jeopardy-card">
-                        <div class="well card-box bg-blue">
-                            <button class="boxes" id="myBtn">$400</button>
-                        </div>
-                    </div>
-                    <div class="box btn btn-fix text-center col-2 jeopardy-card">
-                        <div class="well card-box bg-blue">
-                            <button class="boxes" id="myBtn">$400</button>
+                            <button class="boxes" id="myBtn5">$200</button>
                         </div>
                     </div>
                 </div>
@@ -132,27 +102,27 @@
                 <div class="row">
                     <div class="box btn btn-fix text-center col-2 jeopardy-card">
                         <div class="well card-box bg-blue">
-                            <button class="boxes" id="myBtn">$600</button>
+                            <button class="boxes" id="myBtn6">$400</button>
                         </div>
                     </div>
                     <div class="box btn btn-fix text-center col-2 jeopardy-card">
                         <div class="well card-box bg-blue">
-                            <button class="boxes" id="myBtn">$600</button>
+                            <button class="boxes" id="myBtn7">$400</button>
                         </div>
                     </div>
                     <div class="box btn btn-fix text-center col-2 jeopardy-card">
                         <div class="well card-box bg-blue">
-                            <button class="boxes" id="myBtn">$600</button>
+                            <button class="boxes" id="myBtn8">$400</button>
                         </div>
                     </div>
                     <div class="box btn btn-fix text-center col-2 jeopardy-card">
                         <div class="well card-box bg-blue">
-                            <button class="boxes" id="myBtn">$600</button>
+                            <button class="boxes" id="myBtn9">$400</button>
                         </div>
                     </div>
                     <div class="box btn btn-fix text-center col-2 jeopardy-card">
                         <div class="well card-box bg-blue">
-                            <button class="boxes" id="myBtn">$600</button>
+                            <button class="boxes" id="myBtn10">$400</button>
                         </div>
                     </div>
                 </div>
@@ -162,27 +132,57 @@
                 <div class="row">
                     <div class="box btn btn-fix text-center col-2 jeopardy-card">
                         <div class="well card-box bg-blue">
-                            <button class="boxes" id="myBtn">$800</button>
+                            <button class="boxes" id="myBtn11">$600</button>
                         </div>
                     </div>
                     <div class="box btn btn-fix text-center col-2 jeopardy-card">
                         <div class="well card-box bg-blue">
-                            <button class="boxes" id="myBtn">$800</button>
+                            <button class="boxes" id="myBtn12">$600</button>
                         </div>
                     </div>
                     <div class="box btn btn-fix text-center col-2 jeopardy-card">
                         <div class="well card-box bg-blue">
-                            <button class="boxes" id="myBtn">$800</button>
+                            <button class="boxes" id="myBtn13">$600</button>
                         </div>
                     </div>
                     <div class="box btn btn-fix text-center col-2 jeopardy-card">
                         <div class="well card-box bg-blue">
-                            <button class="boxes" id="myBtn">$800</button>
+                            <button class="boxes" id="myBtn14">$600</button>
                         </div>
                     </div>
                     <div class="box btn btn-fix text-center col-2 jeopardy-card">
                         <div class="well card-box bg-blue">
-                            <button class="boxes" id="myBtn">$800</button>
+                            <button class="boxes" id="myBtn15">$600</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div onclick="answerQuestion();">
+                <div class="row">
+                    <div class="box btn btn-fix text-center col-2 jeopardy-card">
+                        <div class="well card-box bg-blue">
+                            <button class="boxes" id="myBtn16">$800</button>
+                        </div>
+                    </div>
+                    <div class="box btn btn-fix text-center col-2 jeopardy-card">
+                        <div class="well card-box bg-blue">
+                            <button class="boxes" id="myBtn17">$800</button>
+                        </div>
+                    </div>
+                    <div class="box btn btn-fix text-center col-2 jeopardy-card">
+                        <div class="well card-box bg-blue">
+                            <button class="boxes" id="myBtn18">$800</button>
+                        </div>
+                    </div>
+                    <div class="box btn btn-fix text-center col-2 jeopardy-card">
+                        <div class="well card-box bg-blue">
+                            <button class="boxes" id="myBtn19">$800</button>
+                        </div>
+                    </div>
+                    <div class="box btn btn-fix text-center col-2 jeopardy-card">
+                        <div class="well card-box bg-blue">
+                            <button class="boxes" id="myBtn20">$800</button>
                         </div>
                     </div>
                 </div>
@@ -192,27 +192,27 @@
                 <div class="row">
                     <div class="box btn btn-fix text-center col-2 jeopardy-card">
                         <div class="well card-box bg-blue">
-                            <button class="boxes" id="myBtn">$1000</button>
+                            <button class="boxes" id="myBtn21">$1000</button>
                         </div>
                     </div>
                     <div class="box btn btn-fix text-center col-2 jeopardy-card">
                         <div class="well card-box bg-blue">
-                            <button class="boxes" id="myBtn">$1000</button>
+                            <button class="boxes" id="myBtn22">$1000</button>
                         </div>
                     </div>
                     <div class="box btn btn-fix text-center col-2 jeopardy-card">
                         <div class="well card-box bg-blue">
-                            <button class="boxes" id="myBtn">$1000</button>
+                            <button class="boxes" id="myBtn23">$1000</button>
                         </div>
                     </div>
                     <div class="box btn btn-fix text-center col-2 jeopardy-card">
                         <div class="well card-box bg-blue">
-                            <button class="boxes" id="myBtn">$1000</button>
+                            <button class="boxes" id="myBtn24">$1000</button>
                         </div>
                     </div>
                     <div class="box btn btn-fix text-center col-2 jeopardy-card">
                         <div class="well card-box bg-blue">
-                            <button class="boxes" id="myBtn">$1000</button>
+                            <button class="boxes" id="myBtn25">$1000</button>
                         </div>
                     </div>
             </form>
@@ -221,9 +221,7 @@
     <!-- scores and stuff -->
     <div class="score col-2">
         <h1>Score:
-            <?= // Actual score var
-            $_SESSION["score"]
-            ?>
+            <?= $_SESSION["score"] ?>
         </h1>
 
         <div class="exit">
@@ -239,8 +237,9 @@
             <form class="white" method="post">
                 <label for="guess" class="form-label" style="color:black"><?= $array[0]["question"]; ?></label>
                 <input type="text" class="form-control" id="answer" name="answer" /><br>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button id="modalSubmit" class="btn btn-primary">Submit</button>
             </form>
+            <span class="close">&times;</span>
         </div>
 
     </div>
@@ -252,6 +251,8 @@
         var btn = document.getElementsByClassName("boxes");
         // Get the <span> element that closes the modal
         var span = document.getElementsByClassName("close")[0];
+        // Modal submit button
+        var submit = document.getElementById("modalSubmit");
         // When the user clicks the button, open the modal 
         for (var i = 0; i < btn.length; i++) {
             btn[i].onclick = function() {
@@ -261,6 +262,7 @@
         // When the user clicks on <span> (x), close the modal
         span.onclick = function() {
             modal.style.display = "none";
+            btn.style.visibility = "hidden";
         }
         // When the user clicks anywhere outside of the modal, close it
         window.onclick = function(event) {
@@ -268,6 +270,8 @@
                 modal.style.display = "none";
             }
         }
+
+        
     </script>
 </body>
 
