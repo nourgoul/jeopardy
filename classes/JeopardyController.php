@@ -88,7 +88,7 @@ class JeopardyController
                 $message = "<div class='alert alert-danger'><b>$answer</b> was incorrect.  The correct was {$_SESSION["answer"]}.</div>"; 
             }
         }
-        
+        */
         $message = "";
         if (isset($_POST["answer"])) {
             $answer = $_POST["answer"];
@@ -108,7 +108,6 @@ class JeopardyController
                 $message = "<div class='alert alert-danger'><b>$answer</b> was incorrect.  The correct was {$data[0]["answer"]}.</div>";
             }
         }
-        */
         include("templates/jeopardy.php");
     }
 
