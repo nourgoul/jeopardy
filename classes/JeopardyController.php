@@ -43,9 +43,32 @@ class JeopardyController
         }
     }
 
-    // Load jeopardy question
+    // Load jeopardy questions as associative array
     private function loadJeopardy()
     {
+        $uid = 0;
+        $zero = 0;
+        if (isset($_SESSION["id"])) {
+            $uid = $_SESSION["id"];
+        }
+        $topics = $this->db->query("select * from topic where user_id=? or user_id=? order by rand() limit 5;", "ii", $zero, $uid);
+        if (count($topics) != 5) {
+            echo "AHHHHHH";
+            die("Not enough topics in database");
+        }
+        $array = array();
+        for ($i = 0; $i < 5; $i++) {
+            $q = $this->db->query("select * from question where topic_id=? order by value asc limit 5;", "i", $topics[$i]["id"]);
+            if (count($q) != 5) {
+                echo "AHHHHHH";
+                die("Not enough questions");
+            }
+            $array[$topics[$i]["topic_name"]] = $q;
+        }
+        echo print_r($array, true);
+        return $array;
+
+        /*
         $data = $this->db->query("select id, question, answer from question order by rand();");
         if (!isset($data[0])) {
             die("No questions in the database");
@@ -53,11 +76,13 @@ class JeopardyController
         $rand = rand(1, count($data)-1);
         $question = $data[$rand];
         return $question;
+        */
     }
 
     // Jeopardy question function
     private function jeopardy()
     {
+        /*
         $array = array();
         $question = $this->loadJeopardy();
         if ($question == null) {
@@ -67,6 +92,9 @@ class JeopardyController
             $question = $this->loadJeopardy();
             array_push($array, $question);
         }
+        */
+        
+        $array = $this->loadJeopardy();
 
         if (isset($_POST["email"], $_POST["name"], $_POST["password"]) && !empty($_POST["email"])  && !empty($_POST["name"])  && !empty($_POST["password"])) {
         $user = [
