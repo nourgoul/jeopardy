@@ -16,22 +16,22 @@ class JeopardyController
     public function run()
     {
         switch ($this->command) {
-            // Jeopardy game - questions
+                // Jeopardy game - questions
             case "jeopardy":
                 $this->jeopardy();
                 break;
-            // Start session
+                // Start session
             case "start":
                 $this->start();
                 break;
-            // Game over
+                // Game over
             case "over":
                 $this->over();
                 break;
             case "login":
                 $this->login();
                 break;
-            // Add cateogry
+                // Add cateogry
             case "add":
                 $this->add();
                 break;
@@ -50,7 +50,9 @@ class JeopardyController
         $zero = 0;
         if (isset($_SESSION["id"])) {
             $uid = $_SESSION["id"];
+            // edit this - solely enter user entered data
         }
+        // else ? random
         $topics = $this->db->query("select * from topic where user_id=? or user_id=? order by rand() limit 5;", "ii", $zero, $uid);
         if (count($topics) != 5) {
             echo "AHHHHHH";
@@ -65,50 +67,26 @@ class JeopardyController
             }
             $array[$topics[$i]["topic_name"]] = $q;
         }
-        // bug
-//        echo print_r($array, true);
         return $array;
 
-        /*
-        $data = $this->db->query("select id, question, answer from question order by rand();");
-        if (!isset($data[0])) {
-            die("No questions in the database");
-        }
-        $rand = rand(1, count($data)-1);
-        $question = $data[$rand];
-        return $question;
-        */
+        header("Content-type: application/json");
+        json_encode($array, JSON_PRETTY_PRINT);
     }
 
     // Jeopardy question function
     private function jeopardy()
     {
-        /*
-        $array = array();
-        $question = $this->loadJeopardy();
-        if ($question == null) {
-            die("No questions available");
-        }
-        for ($i = 0; $i <= 25; $i++) {
-            $question = $this->loadJeopardy();
-            array_push($array, $question);
-        }
-        */
-        
         $array = $this->loadJeopardy();
-//        array_keys($array)[0]
-//        $questions  = $array[(array_keys($array))[0]]
-//        $questions[0]["question"]
-        // foreach question in questions
-
         if (isset($_POST["email"], $_POST["name"], $_POST["password"]) && !empty($_POST["email"])  && !empty($_POST["name"])  && !empty($_POST["password"])) {
-        $user = [
-            "name" => $_SESSION["name"],
-            "email" => $_SESSION["email"],
-            "score" => $_SESSION["score"]
-        ];
-    }
-/*    
+            $user = [
+                "name" => $_SESSION["name"],
+                "email" => $_SESSION["email"],
+                "score" => $_SESSION["score"]
+            ];
+        }
+
+        
+        /*   
         $message = "";
         $_SESSION["score"] = 0;
         if (isset($_POST["answer"])) {
@@ -121,7 +99,7 @@ class JeopardyController
                 $message = "<div class='alert alert-danger'><b>$answer</b> was incorrect.  The correct was {$_SESSION["answer"]}.</div>"; 
             }
         }
-        */
+        
         $message = "";
         if (isset($_POST["answer"])) {
             $answer = $_POST["answer"];
@@ -141,6 +119,7 @@ class JeopardyController
                 $message = "<div class='alert alert-danger'><b>$answer</b> was incorrect.  The correct was {$data[0]["answer"]}.</div>";
             }
         }
+        */
         include("templates/jeopardy.php");
     }
 
@@ -152,38 +131,38 @@ class JeopardyController
                 $error_msg = "Submit a valid email.";
                 header("Location: ?command=login");
             } else {
-            $data = $this->db->query("select * from user where email = ?;", "s", $_POST["email"]);
+                $data = $this->db->query("select * from user where email = ?;", "s", $_POST["email"]);
 
-            if ($data === false) {
-                $error_msg = "Error checking for user";
-            } else if (empty($data)) { //if there is no user then insert them
-                $insert = $this->db->query(
-                    "insert into user (name, email, password) values (?, ?, ?);",
-                    "sss",
-                    $_POST["name"],
-                    $_POST["email"],
-                    password_hash($_POST["password"], PASSWORD_DEFAULT)
-                );
-                if ($insert === false) {
-                    $error_msg = "Error inserting user";
+                if ($data === false) {
+                    $error_msg = "Error checking for user";
+                } else if (empty($data)) { //if there is no user then insert them
+                    $insert = $this->db->query(
+                        "insert into user (name, email, password) values (?, ?, ?);",
+                        "sss",
+                        $_POST["name"],
+                        $_POST["email"],
+                        password_hash($_POST["password"], PASSWORD_DEFAULT)
+                    );
+                    if ($insert === false) {
+                        $error_msg = "Error inserting user";
+                    }
+                    $data = $this->db->query("select * from user where email = ?;", "s", $_POST["email"]); //reload data after insert
                 }
-                $data = $this->db->query("select * from user where email = ?;", "s", $_POST["email"]); //reload data after insert
-            }
 
-            if ($data === false) {
-                $error_msg = "Error checking for user";
-            } else if (!empty($data)) {
-                if (password_verify($_POST["password"], $data[0]["password"])) {
-                    $_SESSION["name"] = $data[0]["name"];
-                    $_SESSION["email"] = $data[0]["email"];
-                    $_SESSION["id"] = $data[0]["id"];
-                    header("Location: ?command=add");
-                } else {
-                    $error_msg = "Wrong password";
+                if ($data === false) {
+                    $error_msg = "Error checking for user";
+                } else if (!empty($data)) {
+                    if (password_verify($_POST["password"], $data[0]["password"])) {
+                        $_SESSION["name"] = $data[0]["name"];
+                        $_SESSION["email"] = $data[0]["email"];
+                        $_SESSION["id"] = $data[0]["id"];
+                        header("Location: ?command=add");
+                    } else {
+                        $error_msg = "Wrong password";
+                    }
                 }
             }
         }
-    }
         include("templates/login.php");
     }
 
@@ -192,7 +171,7 @@ class JeopardyController
         if (!isset($_SESSION)) {
             session_start();
         }
-//        include("templates/jeopardy.php");
+        //        include("templates/jeopardy.php");
         header("Location: ?command=jeopardy");
     }
 
