@@ -65,7 +65,8 @@ class JeopardyController
             }
             $array[$topics[$i]["topic_name"]] = $q;
         }
-        echo print_r($array, true);
+        // bug
+//        echo print_r($array, true);
         return $array;
 
         /*
@@ -95,6 +96,10 @@ class JeopardyController
         */
         
         $array = $this->loadJeopardy();
+//        array_keys($array)[0]
+//        $questions  = $array[(array_keys($array))[0]]
+//        $questions[0]["question"]
+        // foreach question in questions
 
         if (isset($_POST["email"], $_POST["name"], $_POST["password"]) && !empty($_POST["email"])  && !empty($_POST["name"])  && !empty($_POST["password"])) {
         $user = [
