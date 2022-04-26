@@ -557,7 +557,8 @@
             // Why innerHTML and not textContent?
             document.getElementById("guess").innerHTML = question.question;
         }
-
+        
+        // return false won't stop it from refreshing :(
         function checkAnswer() {
             var answer = document.getElementById("answer").value;
             var score = document.getElementByName("score").value;
@@ -575,6 +576,7 @@
                 document.getElementById("message").innerHTML =
                     "<div class='alert alert-success'>Incorrect.</div>";
             }
+            return false;
         }
 
         // Need to add the initial question load
