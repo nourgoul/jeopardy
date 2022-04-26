@@ -55,6 +55,47 @@
             </div>
         </div>
     </div>
+    <script>
+        // not working bruh
+        function validate() {
+            var email = document.getElementById("email").value;
+            var pass = document.getElementById("password").value;
+
+            if (email.length > 5 && pass.length > 5) {
+                return true;
+            }
+            alert("Please enter a long enough email and password.")
+            return false;
+        }
+
+        // Password validate function has default length 5, but can
+        // be updated by parameter
+        function passwordValidate(len = 5) {
+            var pass = document.getElementById("password");
+            var submit = document.getElementById("submit");
+            var pwhelp = document.getElementById("pwhelp");
+            var passval = pass.value;
+
+            if (passval.length < len) {
+                pass.classList.add("is-invalid");
+                submit.disabled = true;
+                pwhelp.textContent = "Please enter a longer password.";
+            } else {
+                pass.classList.remove("is-invalid");
+                submit.disabled = false;
+                pwhelp.textContent = "";
+            }
+        }
+
+        // Set the on blur event to call our passwordValidate handler
+        document.getElementById("password").onblur  = passwordValidate;
+
+        // Modern way to set event handlers.  Use anonymous function
+        // so that we can pass a parameter to our actual handler.
+        document.getElementById("password").addEventListener("keyup", function() {
+            passwordValidate(7);
+        });
+    </script>
 </body>
 
 </html>

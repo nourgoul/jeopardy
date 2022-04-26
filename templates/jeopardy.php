@@ -219,7 +219,7 @@
         <!-- scores and stuff -->
         <div class="score col-2">
             <h1>Score:
-                <?= $_SESSION["score"] ?>
+            <span id="score">0</span>
             </h1>
 
             <div class="exit">
@@ -520,7 +520,65 @@
     </div>
 
     <script>
+        var question = null;
+        var score = 0;
 
+        function getQuestion() {
+            return new Promise( resolve => {
+
+            // instantiate the object
+            var ajax = new XMLHttpRequest();
+            // open the request
+            ajax.open("GET", "?command=loadJeopardy", true);
+            // ask for a specific response
+            ajax.responseType = "json";
+            // send the request
+            ajax.send(null);
+
+            // What happens if the load succeeds
+            ajax.addEventListener("load", function() {
+                // set question
+                if (this.status == 200) { // worked 
+                    question = this.response;
+                    displayQuestion();
+                }
+            });
+
+            // What happens on error
+            ajax.addEventListener("error", function() {
+                document.getElementById("message").innerHTML =
+                    "<div class='alert alert-danger'>An Error Occurred</div>";
+            });
+        });
+    }
+
+        // Method to display a question
+        function displayQuestion() {
+            // Why innerHTML and not textContent?
+            document.getElementById("guess").innerHTML = question.question;
+        }
+
+        function checkAnswer() {
+            var answer = document.getElementById("answer").value;
+            var score = document.getElementByName("score").value;
+
+            document.getElementById("answer").value = "";
+
+            if (question.answer == answer) {
+                // got it right
+                score += 10;
+                document.getElementById("score").textContent = score;
+                document.getElementById("message").innerHTML =
+                    "<div class='alert alert-success'>Correct!</div>";
+
+            } else {
+                document.getElementById("message").innerHTML =
+                    "<div class='alert alert-success'>Incorrect.</div>";
+            }
+        }
+
+        // Need to add the initial question load
+        getQuestion();
         /* MODALS */
         var modal = document.getElementById("myModal");
         var modal1 = document.getElementById("myModal1");
@@ -599,8 +657,7 @@
         var span22 = document.getElementsByClassName("close")[22];
         var span23 = document.getElementsByClassName("close")[23];
         var span24 = document.getElementsByClassName("close")[24];
-        // Modal submit button
-        //        var submit = document.getElementById("modalSubmit");
+
         // When the user clicks the button, open the modal 
         btn1.onclick = function() {
             modal.style.display = "block";
@@ -779,14 +836,6 @@
         }
         span24.onclick = function() {
             modal24.style.display = "none";
-            btn25.style.visibility = "hidden";
-        }
-
-        // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
         }
     </script>
 </body>
