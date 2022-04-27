@@ -35,7 +35,7 @@
             }
             ?>
 
-            <h1 class="h1 text-center">PLAY JEOPARDY</h1>
+            <h1 class="h1 text-center" id="h1">PLAY JEOPARDY</h1>
 
             <div class="row">
                 <div class="topic btn btn-fix text-center col-2">
@@ -219,11 +219,11 @@
         <!-- scores and stuff -->
         <div class="score col-2">
             <h1>Score:
-            <span id="score">0</span>
+                <span id="score">0</span>
             </h1>
 
             <div class="exit">
-                <a class="btn btn-danger" href="?command=over">End Game</a>
+                <a class="btn btn-danger" href="?command=over" id="endgame">End Game</a>
             </div>
 
         </div>
@@ -518,46 +518,55 @@
         </div>
     </div>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#endgame").hover(function() {
+                    alert("Are you sure you want to leave?");
+                },
+                function() {
+                });
+        });
 
-    <script>
+
         var question = null;
         var score = 0;
 
         function getQuestion() {
-            return new Promise( resolve => {
+            return new Promise(resolve => {
 
-            // instantiate the object
-            var ajax = new XMLHttpRequest();
-            // open the request
-            ajax.open("GET", "?command=loadJeopardy", true);
-            // ask for a specific response
-            ajax.responseType = "json";
-            // send the request
-            ajax.send(null);
+                // instantiate the object
+                var ajax = new XMLHttpRequest();
+                // open the request
+                ajax.open("GET", "?command=loadJeopardy", true);
+                // ask for a specific response
+                ajax.responseType = "json";
+                // send the request
+                ajax.send(null);
 
-            // What happens if the load succeeds
-            ajax.addEventListener("load", function() {
-                // set question
-                if (this.status == 200) { // worked 
-                    question = this.response;
-                    displayQuestion();
-                }
+                // What happens if the load succeeds
+                ajax.addEventListener("load", function() {
+                    // set question
+                    if (this.status == 200) { // worked 
+                        question = this.response;
+                        displayQuestion();
+                    }
+                });
+
+                // What happens on error
+                ajax.addEventListener("error", function() {
+                    document.getElementById("message").innerHTML =
+                        "<div class='alert alert-danger'>An Error Occurred</div>";
+                });
             });
-
-            // What happens on error
-            ajax.addEventListener("error", function() {
-                document.getElementById("message").innerHTML =
-                    "<div class='alert alert-danger'>An Error Occurred</div>";
-            });
-        });
-    }
+        }
 
         // Method to display a question
         function displayQuestion() {
             // Why innerHTML and not textContent?
             document.getElementById("guess").innerHTML = question.question;
         }
-        
+
         // return false won't stop it from refreshing :( also doesnt work lol
         function checkAnswer() {
             var answer = document.getElementById("answer").value;
@@ -736,6 +745,8 @@
         btn25.onclick = function() {
             modal24.style.display = "block";
         }
+
+
         // When the user clicks on <span> (x), close the modal
         span.onclick = function() {
             modal.style.display = "none";
