@@ -235,8 +235,9 @@
             <form class="white" method="post">
                 <span class="close">&times;</span>
                 <label for="guess" id="question" class="form-label" style="color:black"><?= array_values($array)[0][0]["question"]; ?></label>
-                <input type="text" class="form-control" id="answer" name="answer" /><br>
-                <button id="modalSubmit1" class="btn btn-primary modsub" onclick="checkAnswer(); return false;">Submit</button>
+                <input type="text" class="form-control" id="answer" name="answer0" /><br>
+                <input type="hidden" name="modNum" value="0">
+                <button id="modalSubmit1" class="btn btn-primary modsub" onclick="checkAnswer(0); return false;">Submit</button>
                 <div id="message"></div>
             </form>
         </div>
@@ -248,8 +249,9 @@
             <form class="white" method="post">
                 <span class="close">&times;</span>
                 <label for="guess" class="form-label" style="color:black"><?= array_values($array)[1][0]["question"]; ?></label>
-                <input type="text" class="form-control" id="answer" name="answer" /><br>
-                <button id="modalSubmit2" class="btn btn-primary modsub" onclick="checkAnswer(); return false;">Submit</button>
+                <input type="text" class="form-control" id="answer" name="answer1" /><br>
+                <input type="hidden" name="modNum" value="1">
+                <button id="modalSubmit2" class="btn btn-primary modsub" onclick="checkAnswer(1); return false;">Submit</button>
             </form>
         </div>
     </div>
@@ -260,8 +262,9 @@
             <form class="white" method="post">
                 <span class="close">&times;</span>
                 <label for="guess" class="form-label" style="color:black"><?= array_values($array)[2][0]["question"]; ?></label>
-                <input type="text" class="form-control" id="answer" name="answer" /><br>
-                <button id="modalSubmit3" class="btn btn-primary modsub" onclick="checkAnswer(); return false;">Submit</button>
+                <input type="text" class="form-control" id="answer" name="answer2" /><br>
+                <input type="hidden" name="modNum" value="2">
+                <button id="modalSubmit3" class="btn btn-primary modsub" onclick="checkAnswer(2); return false;">Submit</button>
             </form>
         </div>
     </div>
@@ -272,8 +275,9 @@
             <form class="white" method="post">
                 <span class="close">&times;</span>
                 <label for="guess" class="form-label" style="color:black"><?= array_values($array)[3][0]["question"]; ?></label>
-                <input type="text" class="form-control" id="answer" name="answer" /><br>
-                <button id="modalSubmit4" class="btn btn-primary modsub" onclick="checkAnswer(); return false;">Submit</button>
+                <input type="text" class="form-control" id="answer" name="answer3" /><br>
+                <input type="hidden" name="modNum" value="3">
+                <button id="modalSubmit4" class="btn btn-primary modsub" onclick="checkAnswer(3); return false;">Submit</button>
             </form>
         </div>
     </div>
@@ -284,8 +288,9 @@
             <form class="white" method="post">
                 <span class="close">&times;</span>
                 <label for="guess" class="form-label" style="color:black"><?= array_values($array)[4][0]["question"]; ?></label>
-                <input type="text" class="form-control" id="answer" name="answer" /><br>
-                <button id="modalSubmit5" class="btn btn-primary modsub" onclick="checkAnswer(); return false;">Submit</button>
+                <input type="text" class="form-control" id="answer" name="answer4" /><br>
+                <input type="hidden" name="modNum" value="4">
+                <button id="modalSubmit5" class="btn btn-primary modsub" onclick="checkAnswer(4); return false;">Submit</button>
             </form>
         </div>
     </div>
@@ -296,8 +301,9 @@
             <form class="white" method="post">
                 <span class="close">&times;</span>
                 <label for="guess" class="form-label" style="color:black"><?= array_values($array)[0][1]["question"]; ?></label>
-                <input type="text" class="form-control" id="answer" name="answer" /><br>
-                <button id="modalSubmit6" class="btn btn-primary modsub" onclick="checkAnswer(); return false;">Submit</button>
+                <input type="text" class="form-control" id="answer" name="answer5" /><br>
+                <input type="hidden" name="modNum" value="5">
+                <button id="modalSubmit6" class="btn btn-primary modsub" onclick="checkAnswer(5); return false;">Submit</button>
             </form>
         </div>
     </div>
@@ -308,8 +314,9 @@
             <form class="white" method="post">
                 <span class="close">&times;</span>
                 <label for="guess" class="form-label" style="color:black"><?= array_values($array)[1][1]["question"]; ?></label>
-                <input type="text" class="form-control" id="answer" name="answer" /><br>
-                <button id="modalSubmit7" class="btn btn-primary modsub" onclick="checkAnswer(); return false;">Submit</button>
+                <input type="text" class="form-control" id="answer" name="answer6" /><br>
+                <input type="hidden" name="modNum" value="6">
+                <button id="modalSubmit7" class="btn btn-primary modsub" onclick="checkAnswer(6); return false;">Submit</button>
             </form>
         </div>
     </div>
@@ -320,8 +327,9 @@
             <form class="white" method="post">
                 <span class="close">&times;</span>
                 <label for="guess" class="form-label" style="color:black"><?= array_values($array)[2][1]["question"]; ?></label>
-                <input type="text" class="form-control" id="answer" name="answer" /><br>
-                <button id="modalSubmit8" class="btn btn-primary modsub" onclick="checkAnswer(); return false;">Submit</button>
+                <input type="text" class="form-control" id="answer" name="answer7" /><br>
+                <input type="hidden" name="modNum" value="7">
+                <button id="modalSubmit8" class="btn btn-primary modsub" onclick="checkAnswer(7); return false;">Submit</button>
             </form>
         </div>
     </div>
@@ -332,8 +340,9 @@
             <form class="white" method="post">
                 <span class="close">&times;</span>
                 <label for="guess" class="form-label" style="color:black"><?= array_values($array)[3][1]["question"]; ?></label>
-                <input type="text" class="form-control" id="answer" name="answer" /><br>
-                <button id="modalSubmit9" class="btn btn-primary modsub" onclick="checkAnswer(); return false;">Submit</button>
+                <input type="text" class="form-control" id="answer" name="answer8" /><br>
+                <input type="hidden" name="modNum" value="8">
+                <button id="modalSubmit9" class="btn btn-primary modsub" onclick="checkAnswer(8); return false;">Submit</button>
             </form>
         </div>
     </div>
@@ -344,8 +353,9 @@
             <form class="white" method="post">
                 <span class="close">&times;</span>
                 <label for="guess" class="form-label" style="color:black"><?= array_values($array)[4][1]["question"]; ?></label>
-                <input type="text" class="form-control" id="answer" name="answer" /><br>
-                <button id="modalSubmit10" class="btn btn-primary modsub" onclick="checkAnswer(); return false;">Submit</button>
+                <input type="text" class="form-control" id="answer" name="answer9" /><br>
+                <input type="hidden" name="modNum" value="9">
+                <button id="modalSubmit10" class="btn btn-primary modsub" onclick="checkAnswer(9); return false;">Submit</button>
             </form>
         </div>
     </div>
@@ -356,8 +366,9 @@
             <form class="white" method="post">
                 <span class="close">&times;</span>
                 <label for="guess" class="form-label" style="color:black"><?= array_values($array)[0][2]["question"]; ?></label>
-                <input type="text" class="form-control" id="answer" name="answer" /><br>
-                <button id="modalSubmit11" class="btn btn-primary modsub" onclick="checkAnswer(); return false;">Submit</button>
+                <input type="text" class="form-control" id="answer" name="answer10" /><br>
+                <input type="hidden" name="modNum" value="10">
+                <button id="modalSubmit11" class="btn btn-primary modsub" onclick="checkAnswer(10); return false;">Submit</button>
             </form>
         </div>
     </div>
@@ -368,8 +379,9 @@
             <form class="white" method="post">
                 <span class="close">&times;</span>
                 <label for="guess" class="form-label" style="color:black"><?= array_values($array)[1][2]["question"]; ?></label>
-                <input type="text" class="form-control" id="answer" name="answer" /><br>
-                <button id="modalSubmit12" class="btn btn-primary modsub" onclick="checkAnswer(); return false;">Submit</button>
+                <input type="text" class="form-control" id="answer" name="answer11" /><br>
+                <input type="hidden" name="modNum" value="11">
+                <button id="modalSubmit12" class="btn btn-primary modsub" onclick="checkAnswer(11); return false;">Submit</button>
             </form>
         </div>
     </div>
@@ -380,8 +392,9 @@
             <form class="white" method="post">
                 <span class="close">&times;</span>
                 <label for="guess" class="form-label" style="color:black"><?= array_values($array)[2][2]["question"]; ?></label>
-                <input type="text" class="form-control" id="answer" name="answer" /><br>
-                <button id="modalSubmit13" class="btn btn-primary modsub" onclick="checkAnswer(); return false;">Submit</button>
+                <input type="text" class="form-control" id="answer" name="answer12" /><br>
+                <input type="hidden" name="modNum" value="12">
+                <button id="modalSubmit13" class="btn btn-primary modsub" onclick="checkAnswer(12); return false;">Submit</button>
             </form>
         </div>
     </div>
@@ -392,8 +405,9 @@
             <form class="white" method="post">
                 <span class="close">&times;</span>
                 <label for="guess" class="form-label" style="color:black"><?= array_values($array)[3][2]["question"]; ?></label>
-                <input type="text" class="form-control" id="answer" name="answer" /><br>
-                <button id="modalSubmit14" class="btn btn-primary modsub" onclick="checkAnswer(); return false;">Submit</button>
+                <input type="text" class="form-control" id="answer" name="answer13" /><br>
+                <input type="hidden" name="modNum" value="13">
+                <button id="modalSubmit14" class="btn btn-primary modsub" onclick="checkAnswer(13); return false;">Submit</button>
             </form>
         </div>
     </div>
@@ -403,8 +417,9 @@
             <form class="white" method="post">
                 <span class="close">&times;</span>
                 <label for="guess" class="form-label" style="color:black"><?= array_values($array)[4][2]["question"]; ?></label>
-                <input type="text" class="form-control" id="answer" name="answer" /><br>
-                <button id="modalSubmit15" class="btn btn-primary modsub" onclick="checkAnswer(); return false;">Submit</button>
+                <input type="text" class="form-control" id="answer" name="answer14" /><br>
+                <input type="hidden" name="modNum" value="14">
+                <button id="modalSubmit15" class="btn btn-primary modsub" onclick="checkAnswer(14); return false;">Submit</button>
             </form>
         </div>
     </div>
@@ -414,8 +429,9 @@
             <form class="white" method="post">
                 <span class="close">&times;</span>
                 <label for="guess" class="form-label" style="color:black"><?= array_values($array)[0][3]["question"]; ?></label>
-                <input type="text" class="form-control" id="answer" name="answer" /><br>
-                <button id="modalSubmit16" class="btn btn-primary modsub" onclick="checkAnswer(); return false;">Submit</button>
+                <input type="text" class="form-control" id="answer" name="answer15" /><br>
+                <input type="hidden" name="modNum" value="15">
+                <button id="modalSubmit16" class="btn btn-primary modsub" onclick="checkAnswer(15); return false;">Submit</button>
             </form>
         </div>
     </div>
@@ -425,8 +441,9 @@
             <form class="white" method="post">
                 <span class="close">&times;</span>
                 <label for="guess" class="form-label" style="color:black"><?= array_values($array)[1][3]["question"]; ?></label>
-                <input type="text" class="form-control" id="answer" name="answer" /><br>
-                <button id="modalSubmit17" class="btn btn-primary modsub" onclick="checkAnswer(); return false;">Submit</button>
+                <input type="text" class="form-control" id="answer" name="answer16" /><br>
+                <input type="hidden" name="modNum" value="16">
+                <button id="modalSubmit17" class="btn btn-primary modsub" onclick="checkAnswer(16); return false;">Submit</button>
             </form>
         </div>
     </div>
@@ -436,8 +453,9 @@
             <form class="white" method="post">
                 <span class="close">&times;</span>
                 <label for="guess" class="form-label" style="color:black"><?= array_values($array)[2][3]["question"]; ?></label>
-                <input type="text" class="form-control" id="answer" name="answer" /><br>
-                <button id="modalSubmit18" class="btn btn-primary modsub" onclick="checkAnswer(); return false;">Submit</button>
+                <input type="text" class="form-control" id="answer" name="answer17" /><br>
+                <input type="hidden" name="modNum" value="17">
+                <button id="modalSubmit18" class="btn btn-primary modsub" onclick="checkAnswer(17); return false;">Submit</button>
             </form>
         </div>
     </div>
@@ -447,8 +465,9 @@
             <form class="white" method="post">
                 <span class="close">&times;</span>
                 <label for="guess" class="form-label" style="color:black"><?= array_values($array)[3][3]["question"]; ?></label>
-                <input type="text" class="form-control" id="answer" name="answer" /><br>
-                <button id="modalSubmit19" class="btn btn-primary modsub" onclick="checkAnswer(); return false;">Submit</button>
+                <input type="text" class="form-control" id="answer" name="answer18" /><br>
+                <input type="hidden" name="modNum" value="18">
+                <button id="modalSubmit19" class="btn btn-primary modsub" onclick="checkAnswer(18); return false;">Submit</button>
             </form>
         </div>
     </div>
@@ -458,8 +477,9 @@
             <form class="white" method="post">
                 <span class="close">&times;</span>
                 <label for="guess" class="form-label" style="color:black"><?= array_values($array)[4][3]["question"]; ?></label>
-                <input type="text" class="form-control" id="answer" name="answer" /><br>
-                <button id="modalSubmit20" class="btn btn-primary modsub" onclick="checkAnswer(); return false;">Submit</button>
+                <input type="text" class="form-control" id="answer" name="answer19" /><br>
+                <input type="hidden" name="modNum" value="19">
+                <button id="modalSubmit20" class="btn btn-primary modsub" onclick="checkAnswer(19); return false;">Submit</button>
             </form>
         </div>
     </div>
@@ -469,8 +489,9 @@
             <form class="white" method="post">
                 <span class="close">&times;</span>
                 <label for="guess" class="form-label" style="color:black"><?= array_values($array)[0][4]["question"]; ?></label>
-                <input type="text" class="form-control" id="answer" name="answer" /><br>
-                <button id="modalSubmit21" class="btn btn-primary modsub" onclick="checkAnswer(); return false;">Submit</button>
+                <input type="text" class="form-control" id="answer" name="answer20" /><br>
+                <input type="hidden" name="modNum" value="20">
+                <button id="modalSubmit21" class="btn btn-primary modsub" onclick="checkAnswer(20); return false;">Submit</button>
             </form>
         </div>
     </div>
@@ -480,8 +501,9 @@
             <form class="white" method="post">
                 <span class="close">&times;</span>
                 <label for="guess" class="form-label" style="color:black"><?= array_values($array)[1][4]["question"]; ?></label>
-                <input type="text" class="form-control" id="answer" name="answer" /><br>
-                <button id="modalSubmit22" class="btn btn-primary modsub" onclick="checkAnswer(); return false;">Submit</button>
+                <input type="text" class="form-control" id="answer" name="answer21" /><br>
+                <input type="hidden" name="modNum" value="21">
+                <button id="modalSubmit22" class="btn btn-primary modsub" onclick="checkAnswer(21); return false;">Submit</button>
             </form>
         </div>
     </div>
@@ -491,8 +513,9 @@
             <form class="white" method="post">
                 <span class="close">&times;</span>
                 <label for="guess" class="form-label" style="color:black"><?= array_values($array)[2][4]["question"]; ?></label>
-                <input type="text" class="form-control" id="answer" name="answer" /><br>
-                <button id="modalSubmit23" class="btn btn-primary modsub" onclick="checkAnswer(); return false;">Submit</button>
+                <input type="text" class="form-control" id="answer" name="answer22" /><br>
+                <input type="hidden" name="modNum" value="22">
+                <button id="modalSubmit23" class="btn btn-primary modsub" onclick="checkAnswer(22); return false;">Submit</button>
             </form>
         </div>
     </div>
@@ -502,8 +525,9 @@
             <form class="white" method="post">
                 <span class="close">&times;</span>
                 <label for="guess" class="form-label" style="color:black"><?= array_values($array)[3][4]["question"]; ?></label>
-                <input type="text" class="form-control" id="answer" name="answer" /><br>
-                <button id="modalSubmit24" class="btn btn-primary modsub" onclick="checkAnswer(); return false;">Submit</button>
+                <input type="text" class="form-control" id="answer" name="answer23" /><br>
+                <input type="hidden" name="modNum" value="23">
+                <button id="modalSubmit24" class="btn btn-primary modsub" onclick="checkAnswer(23); return false;">Submit</button>
             </form>
         </div>
     </div>
@@ -513,8 +537,9 @@
             <form class="white" method="post">
                 <span class="close">&times;</span>
                 <label for="guess" class="form-label" style="color:black"><?= array_values($array)[4][4]["question"]; ?></label>
-                <input type="text" class="form-control" id="answer" name="answer" /><br>
-                <button id="modalSubmit25" class="btn btn-primary modsub" onclick="checkAnswer(); return false;">Submit</button>
+                <input type="text" class="form-control" id="answer" name="answer24" /><br>
+                <input type="hidden" name="modNum" value="24">
+                <button id="modalSubmit25" class="btn btn-primary modsub" onclick="checkAnswer(24); return false;">Submit</button>
             </form>
         </div>
     </div>
@@ -524,6 +549,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
+        // JQuery
         $(document).ready(function() {
             $("#h1").hover(function() {
                     alert("Get ready to play!");
@@ -539,7 +565,7 @@
         var topics =<?php echo json_encode(array_keys($array)); ?>;
         var answersList = formatBoardArray();
         var score = 0;
-        document.getElementById("christiantest").innerHTML = answersList[17];
+        document.getElementById("christiantest").innerHTML = answersList;
 
         function formatBoardArray() {
             var checking = [];
@@ -561,7 +587,6 @@
             ajax.responseType = "json";
             // send the request
             ajax.send(null);
-
             // What happens if the load succeeds
             ajax.addEventListener("load", function() {
                 // set question
@@ -570,7 +595,6 @@
                     displayQuestion();
                 }
             });
-
             // What happens on error
             ajax.addEventListener("error", function() {
                 document.getElementById("message").innerHTML =
@@ -587,7 +611,10 @@
         }
         */
 
-        function checkAnswer() {
+        function checkAnswer(num) {
+            var elemid = "answer" + num.toString();
+            document.getElementById("christiantest").innerHTML = "what";
+
             var answer = document.getElementById("answer").value;
 
             document.getElementById("answer").value = "";
@@ -602,13 +629,15 @@
                 document.getElementById("message").innerHTML =
                     "<div class='alert alert-success'>Incorrect.</div>";
             }
+            return false;
         }
 
         // Need to add the initial question load
-        getQuestion();
+        // getQuestion();
     </script>
     <script type="text/javascript">
-        /* MODALS */
+        // DOM Manipulation - Hide buttons once exiting modal
+        // Modify style / content - Modals pop up when clicking button
         var modal = document.getElementById("myModal");
         var modal1 = document.getElementById("myModal1");
         var modal2 = document.getElementById("myModal2");
@@ -687,7 +716,7 @@
         var span23 = document.getElementsByClassName("close")[23];
         var span24 = document.getElementsByClassName("close")[24];
 
-        // When the user clicks the button, open the modal 
+        // Arrow Function
         btn1.onclick = () => {
             modal.style.display = "block";
         }
@@ -765,7 +794,7 @@
         }
 
 
-        // When the user clicks on <span> (x), close the modal
+        // Anonymous Function
         span.onclick = function() {
             modal.style.display = "none";
             btn1.style.visibility = "hidden";
