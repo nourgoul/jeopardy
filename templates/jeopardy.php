@@ -238,7 +238,7 @@
                 <input type="text" class="form-control" id="answer0" name="answer0" /><br>
                 <input type="hidden" name="modNum" value="0">
                 <button id="modalSubmit1" class="btn btn-primary modsub" onclick="checkAnswer(0); return false;">Submit</button>
-                <div id="message00"></div>
+                <div id="message0"></div>
             </form>
         </div>
     </div>
