@@ -35,7 +35,7 @@
                     echo "<div class='alert alert-danger'>$error_msg</div>";
                 }
                 ?>
-                <form class="white" action="?command=login" method="post">
+                <form class="white" action="?command=login" onsubmit="return validate();" method="post">
                     <div class="mb-3">
                         <label for="name" class="form-label">Name</label>
                         <input type="text" class="form-control" id="name" name="name" />
@@ -68,7 +68,6 @@
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
     <script type="text/javascript">
-        // not working bruh
         function validate() {
             var email = document.getElementById("email").value;
             var pass = document.getElementById("password").value;
@@ -82,28 +81,23 @@
 
         // Password validate function has default length 5, but can
         // be updated by parameter
-        function passwordValidate(len = 5) {
+        function passwordValidate(len = 1) {
             var pass = document.getElementById("password");
             var submit = document.getElementById("submit");
-            var pwhelp = document.getElementById("pwhelp");
             var passval = pass.value;
 
-            if (passval.length < len) {
+            if (passval.length <= len) {
                 pass.classList.add("is-invalid");
                 submit.disabled = true;
-                pwhelp.textContent = "Please enter a longer password.";
+                alert("Please enter a long enough password.")
             } else {
                 pass.classList.remove("is-invalid");
                 submit.disabled = false;
-                pwhelp.textContent = "";
             }
         }
 
         // Set the on blur event to call our passwordValidate handler
         document.getElementById("password").onblur = passwordValidate;
-
-        // Modern way to set event handlers.  Use anonymous function
-        // so that we can pass a parameter to our actual handler.
         document.getElementById("password").addEventListener("keyup", function() {
             passwordValidate(7);
         });

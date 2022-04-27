@@ -27,7 +27,7 @@ class JeopardyController
             case "start":
                 $this->start();
                 break;
-                // Game over
+            // Game over
             case "over":
                 $this->over();
                 break;

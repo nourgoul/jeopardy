@@ -522,8 +522,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
         $(document).ready(function() {
-            $("#endgame").hover(function() {
-                    alert("Are you sure you want to leave?");
+            $("#h1").hover(function() {
+                    alert("Get ready to play!");
                 },
                 function() {});
         });
