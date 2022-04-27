@@ -558,7 +558,7 @@
             document.getElementById("guess").innerHTML = question.question;
         }
         
-        // return false won't stop it from refreshing :(
+        // return false won't stop it from refreshing :( also doesnt work lol
         function checkAnswer() {
             var answer = document.getElementById("answer").value;
             var score = document.getElementByName("score").value;
