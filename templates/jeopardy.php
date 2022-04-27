@@ -570,6 +570,7 @@
     </div>
 
     <p id="christiantest">test</p>
+    <p id="scorestest"><p>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
@@ -588,14 +589,26 @@
         var boardArrayObj = <?php echo json_encode($array); ?>;
         var topics = <?php echo json_encode(array_keys($array)); ?>;
         var answersList = formatBoardArray();
+        var scoresList = getScores();
         var score = 0;
         document.getElementById("christiantest").innerHTML = answersList;
+        document.getElementById("scorestest").innerHTML = scoresList;
 
         function formatBoardArray() {
             var checking = [];
             for (let i = 0; i < 5; i++) {
                 for (let j = 0; j < 5; j++) {
                     checking.push(boardArrayObj[topics[j]][i]["answer"]);
+                }
+            }
+            return checking;
+        }
+
+        function getScores() {
+            var checking = [];
+            for (let i = 0; i < 5; i++) {
+                for (let j = 0; j < 5; j++) {
+                    checking.push(boardArrayObj[topics[j]][i]["value"]);
                 }
             }
             return checking;
@@ -639,11 +652,12 @@
             var elemid = "answer" + num.toString();
             var userGuess = document.getElementById(elemid).value;
             var answer = answersList[num];
+            var value = scoresList[num]; 
             document.getElementById(elemid).value = "";
 
             if (userGuess.toLowerCase() == answer.toLowerCase()) {
                 // got it right
-                score += 10;
+                score += value;
                 document.getElementById("score").textContent = score;
                 document.getElementById("message" + num.toString()).innerHTML =
                     "<div class='alert alert-success'>Correct!</div>";
