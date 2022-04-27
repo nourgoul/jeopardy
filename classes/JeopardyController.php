@@ -93,7 +93,7 @@ class JeopardyController
                 "score" => $_SESSION["score"]
             ];
         }
-
+        $_SESSION["score"] = 0;
         
         /*   
         $message = "";
@@ -211,7 +211,7 @@ class JeopardyController
             $topics = $this->db->query("select * from topic where user_id = ?;", "i", $_SESSION["id"]); // update topics array
         }
         include("templates/over.php");
-        header("Location: ?command=over");
+        //header("Location: ?command=over");
     }
 
     private function endSession()

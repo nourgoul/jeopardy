@@ -70,7 +70,6 @@
                         ?>
                         <a href="?command=start" class="btn btn-success">Play Again</a>
                         <a href="?command=logout" class="btn btn-danger">Log Out</a>
-                        <button id="btn" class="btn btn-primary">A Note</button>
                     </div>
                 </form>
             </div>
