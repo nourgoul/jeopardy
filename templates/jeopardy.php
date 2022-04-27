@@ -234,9 +234,10 @@
         <div class="modal-content">
             <form class="white" method="post">
                 <span class="close">&times;</span>
-                <label for="guess" class="form-label" style="color:black"><?= array_values($array)[0][0]["question"]; ?></label>
+                <label for="guess" id="question" class="form-label" style="color:black"><?= array_values($array)[0][0]["question"]; ?></label>
                 <input type="text" class="form-control" id="answer" name="answer" /><br>
                 <button id="modalSubmit1" class="btn btn-primary modsub" onclick="checkAnswer(); return false;">Submit</button>
+                <div id="message"></div>
             </form>
         </div>
     </div>
@@ -519,58 +520,55 @@
     </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script type="text/javascript">
+    <script>
         $(document).ready(function() {
             $("#endgame").hover(function() {
                     alert("Are you sure you want to leave?");
                 },
-                function() {
-                });
+                function() {});
         });
+    </script>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 
+    <script>
         var question = null;
         var score = 0;
 
         function getQuestion() {
-            return new Promise(resolve => {
+            // instantiate the object
+            var ajax = new XMLHttpRequest();
+            // open the request
+            ajax.open("GET", "?command=loadJeopardy", true);
+            // ask for a specific response
+            ajax.responseType = "json";
+            // send the request
+            ajax.send(null);
 
-                // instantiate the object
-                var ajax = new XMLHttpRequest();
-                // open the request
-                ajax.open("GET", "?command=loadJeopardy", true);
-                // ask for a specific response
-                ajax.responseType = "json";
-                // send the request
-                ajax.send(null);
+            // What happens if the load succeeds
+            ajax.addEventListener("load", function() {
+                // set question
+                if (this.status == 200) { // worked 
+                    question = this.response;
+                    displayQuestion();
+                }
+            });
 
-                // What happens if the load succeeds
-                ajax.addEventListener("load", function() {
-                    // set question
-                    if (this.status == 200) { // worked 
-                        question = this.response;
-                        displayQuestion();
-                    }
-                });
-
-                // What happens on error
-                ajax.addEventListener("error", function() {
-                    document.getElementById("message").innerHTML =
-                        "<div class='alert alert-danger'>An Error Occurred</div>";
-                });
+            // What happens on error
+            ajax.addEventListener("error", function() {
+                document.getElementById("message").innerHTML =
+                    "<div class='alert alert-danger'>An Error Occurred</div>";
             });
         }
 
         // Method to display a question
         function displayQuestion() {
             // Why innerHTML and not textContent?
-            document.getElementById("guess").innerHTML = question.question;
+            document.getElementById("question").innerHTML = question.question;
         }
 
-        // return false won't stop it from refreshing :( also doesnt work lol
         function checkAnswer() {
             var answer = document.getElementById("answer").value;
-            var score = document.getElementByName("score").value;
 
             document.getElementById("answer").value = "";
 
@@ -580,16 +578,16 @@
                 document.getElementById("score").textContent = score;
                 document.getElementById("message").innerHTML =
                     "<div class='alert alert-success'>Correct!</div>";
-
             } else {
                 document.getElementById("message").innerHTML =
                     "<div class='alert alert-success'>Incorrect.</div>";
             }
-            return false;
         }
 
         // Need to add the initial question load
         getQuestion();
+    </script>
+    <script type="text/javascript">
         /* MODALS */
         var modal = document.getElementById("myModal");
         var modal1 = document.getElementById("myModal1");

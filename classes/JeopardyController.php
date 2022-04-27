@@ -21,6 +21,9 @@ class JeopardyController
                 $this->jeopardy();
                 break;
                 // Start session
+            case "question_page":
+                $this->questionPage();
+                break;
             case "start":
                 $this->start();
                 break;
@@ -43,8 +46,14 @@ class JeopardyController
         }
     }
 
+    public function questionPage() {
+        // Now we will show the template by default, but with NO data
+        // That will be loaded by AJAX
+        include("templates/jeopardy.php");
+    }
+
     // Load jeopardy questions as associative array
-    private function loadJeopardy()
+    public function loadJeopardy()
     {
         $uid = 0;
         $zero = 0;
@@ -74,7 +83,7 @@ class JeopardyController
     }
 
     // Jeopardy question function
-    private function jeopardy()
+    public function jeopardy()
     {
         $array = $this->loadJeopardy();
         if (isset($_POST["email"], $_POST["name"], $_POST["password"]) && !empty($_POST["email"])  && !empty($_POST["name"])  && !empty($_POST["password"])) {
