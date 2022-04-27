@@ -573,6 +573,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
+        // JQuery
         $(document).ready(function() {
             $("#h1").hover(function() {
                     alert("Get ready to play!");
@@ -610,7 +611,6 @@
             ajax.responseType = "json";
             // send the request
             ajax.send(null);
-
             // What happens if the load succeeds
             ajax.addEventListener("load", function() {
                 // set question
@@ -619,7 +619,6 @@
                     displayQuestion();
                 }
             });
-
             // What happens on error
             ajax.addEventListener("error", function() {
                 document.getElementById("message").innerHTML =
@@ -652,13 +651,15 @@
                 document.getElementById("message" + num.toString()).innerHTML =
                     "<div class='alert alert-danger'>Incorrect.</div>";
             }
+            return false;
         }
 
         // Need to add the initial question load
         // getQuestion();
     </script>
     <script type="text/javascript">
-        /* MODALS */
+        // DOM Manipulation - Hide buttons once exiting modal
+        // Modify style / content - Modals pop up when clicking button
         var modal = document.getElementById("myModal");
         var modal1 = document.getElementById("myModal1");
         var modal2 = document.getElementById("myModal2");
@@ -737,7 +738,7 @@
         var span23 = document.getElementsByClassName("close")[23];
         var span24 = document.getElementsByClassName("close")[24];
 
-        // When the user clicks the button, open the modal 
+        // Arrow Function
         btn1.onclick = () => {
             modal.style.display = "block";
         }
@@ -815,7 +816,7 @@
         }
 
 
-        // When the user clicks on <span> (x), close the modal
+        // Anonymous Function
         span.onclick = function() {
             modal.style.display = "none";
             btn1.style.visibility = "hidden";

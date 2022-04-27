@@ -42,16 +42,12 @@ $db->query("create table question (
             // Jeopardy questions go into "questions" table
 /*
 $triviaData = json_decode(file_get_contents("https://opentdb.com/api.php?amount=100"), true);
-
 print_r($triviaData);
-
 $stmt = $db ->prepare("insert into question (question, answer, topic_id, value) values (?, ?, ?, ?);");
-
 $topic_id = 5;
 $value = 200;
 foreach ($triviaData["results"] as $qn){
     $stmt->bind_param("ssii", $qn["question"], $qn["correct_answer"], $topic_id, $value);
-
     if(!$stmt->execute()){
         echo "could not add question: {$qn["question"]}\n";
     }
