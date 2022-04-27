@@ -57,7 +57,6 @@
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
-        // JQuery - focus / blur
         $(document).ready(function() {
             $("input").focus(function() {
                 $(this).css("background-color", "pink");
@@ -69,7 +68,6 @@
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
     <script type="text/javascript">
-        // Dynamic Behavior - Input Validation 
         function validate() {
             var email = document.getElementById("email").value;
             var pass = document.getElementById("password").value;
@@ -81,6 +79,8 @@
             return false;
         }
 
+        // Password validate function has default length 5, but can
+        // be updated by parameter
         function passwordValidate(len = 1) {
             var pass = document.getElementById("password");
             var submit = document.getElementById("submit");
@@ -96,9 +96,8 @@
             }
         }
 
+        // Set the on blur event to call our passwordValidate handler
         document.getElementById("password").onblur = passwordValidate;
-        // Event Listener
-        // Anonymous Function
         document.getElementById("password").addEventListener("keyup", function() {
             passwordValidate(7);
         });
