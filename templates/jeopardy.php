@@ -40,27 +40,27 @@
             <div class="row">
                 <div class="topic btn btn-fix text-center col-2">
                     <div class="well card-box bg-blue">
-                        <h4><?= array_keys($array)[0]; ?> </h4>
+                        <h4 id="cat1"></h4>
                     </div>
                 </div>
                 <div class="topic btn btn-fix text-center col-2">
                     <div class="well card-box bg-blue">
-                        <h4><?= array_keys($array)[1]; ?></h4>
+                        <h4 id="cat2"></h4>
                     </div>
                 </div>
                 <div class="topic btn btn-fix text-center col-2">
                     <div class="well card-box bg-blue">
-                        <h4><?= array_keys($array)[2]; ?></h4>
+                        <h4 id="cat3"></h4>
                     </div>
                 </div>
                 <div class="topic btn btn-fix text-center col-2">
                     <div class="well card-box bg-blue">
-                        <h4><?= array_keys($array)[3]; ?></h4>
+                        <h4 id="cat4"></h4>
                     </div>
                 </div>
                 <div class="topic btn btn-fix text-center col-2">
                     <div class="well card-box bg-blue">
-                        <h4><?= array_keys($array)[4]; ?></h4>
+                        <h4 id="cat5"></h4>
                     </div>
                 </div>
             </div>
@@ -568,7 +568,7 @@
         </div>
     </div>
     </div>
-    
+
     <p id="christiantest">test</p>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -585,8 +585,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 
     <script>
-        var boardArrayObj =<?php echo json_encode($array); ?>;
-        var topics =<?php echo json_encode(array_keys($array)); ?>;
+        var boardArrayObj = <?php echo json_encode($array); ?>;
+        var topics = <?php echo json_encode(array_keys($array)); ?>;
         var answersList = formatBoardArray();
         var score = 0;
         document.getElementById("christiantest").innerHTML = answersList;
@@ -654,10 +654,23 @@
             return false;
         }
 
-        // Need to add the initial question load
-        // getQuestion();
     </script>
     <script type="text/javascript">
+        // JavaScript Object
+        const categories = {
+            firstCategory: "<?= array_keys($array)[0]; ?>",
+            secondCategory: "<?= array_keys($array)[1]; ?>",
+            thirdCategory: "<?= array_keys($array)[2]; ?>",
+            fourthCategory:"<?= array_keys($array)[3]; ?>",
+            fifthCategory:"<?= array_keys($array)[4]; ?>",
+        };
+
+        document.getElementById("cat1").innerHTML = categories.firstCategory;
+        document.getElementById("cat2").innerHTML = categories.secondCategory;
+        document.getElementById("cat3").innerHTML = categories.thirdCategory;
+        document.getElementById("cat4").innerHTML = categories.fourthCategory;
+        document.getElementById("cat5").innerHTML = categories.fifthCategory;
+
         // DOM Manipulation - Hide buttons once exiting modal
         // Modify style / content - Modals pop up when clicking button
         var modal = document.getElementById("myModal");
