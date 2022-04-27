@@ -81,21 +81,23 @@
         <div class="modal-content">
             <form class="white" method="post">
                 <span class="close">&times;</span>
-                <label for="guess" class="form-label" style="color:black">I hope you enjoyed our game...</label>
+                <label for="guess" class="form-label" style="color:black" onclick="modal();">I hope you enjoyed our game...</label>
             </form>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
     <script type="text/javascript">
-        var btn = document.getElementById("btn");
-        var span = document.getElementsByClassName("close")[0];
+        function modal() {
+            var btn = document.getElementById("btn");
+            var span = document.getElementsByClassName("close")[0];
 
-        btn.onclick = () => {
-            modal.style.display = "block";
-        }
-        span.onclick = function() {
-            modal.style.display = "none";
-            btn1.style.visibility = "hidden";
+            btn.onclick = () => {
+                modal.style.display = "block";
+            }
+            span.onclick = function() {
+                modal.style.display = "none";
+                btn1.style.visibility = "hidden";
+            }
         }
     </script>
 </body>

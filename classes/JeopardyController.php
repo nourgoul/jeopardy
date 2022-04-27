@@ -211,6 +211,7 @@ class JeopardyController
             $topics = $this->db->query("select * from topic where user_id = ?;", "i", $_SESSION["id"]); // update topics array
         }
         include("templates/over.php");
+        header("Location: ?command=over");
     }
 
     private function endSession()
