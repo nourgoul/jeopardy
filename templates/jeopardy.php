@@ -519,6 +519,9 @@
         </div>
     </div>
     </div>
+    
+    <p id="christiantest">test</p>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
         $(document).ready(function() {
@@ -532,9 +535,23 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 
     <script>
-        var question = null;
+        var boardArrayObj =<?php echo json_encode($array); ?>;
+        var topics =<?php echo json_encode(array_keys($array)); ?>;
+        var answersList = formatBoardArray();
         var score = 0;
+        document.getElementById("christiantest").innerHTML = answersList[17];
 
+        function formatBoardArray() {
+            var checking = [];
+            for (let i = 0; i < 5; i++) {
+                for (let j = 0; j < 5; j++) {
+                    checking.push(boardArrayObj[topics[j]][i]["answer"]);
+                }
+            }
+            return checking;
+        }
+
+        /*
         function getQuestion() {
             // instantiate the object
             var ajax = new XMLHttpRequest();
@@ -560,12 +577,15 @@
                     "<div class='alert alert-danger'>An Error Occurred</div>";
             });
         }
+        */
 
+        /*
         // Method to display a question
         function displayQuestion() {
             // Why innerHTML and not textContent?
             document.getElementById("question").innerHTML = question.question;
         }
+        */
 
         function checkAnswer() {
             var answer = document.getElementById("answer").value;
