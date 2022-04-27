@@ -70,6 +70,7 @@
                         ?>
                         <a href="?command=start" class="btn btn-success">Play Again</a>
                         <a href="?command=logout" class="btn btn-danger">Log Out</a>
+                        <button class="btn btn-primary" id="btn1">A Note</button>
                     </div>
                 </form>
             </div>
@@ -80,23 +81,25 @@
         <div class="modal-content">
             <form class="white" method="post">
                 <span class="close">&times;</span>
-                <label for="guess" class="form-label" style="color:black" onclick="modal();">I hope you enjoyed our game...</label>
+                <label for="guess" class="form-label" style="color:black">I hope you enjoyed our game...</label>
             </form>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
     <script type="text/javascript">
-        function modal() {
-            var btn = document.getElementById("btn");
-            var span = document.getElementsByClassName("close")[0];
+        // Dynamic Behavior - DOM Manipulation (button hides once exiting modal)
+        // Dynamic Behavior - Modify style / content (Modals pop up when clicking button)
+        var modal = document.getElementById("myModal");
+        var btn = document.getElementById("btn1");
+        var span = document.getElementsByClassName("close")[0];
 
-            btn.onclick = () => {
-                modal.style.display = "block";
-            }
-            span.onclick = function() {
-                modal.style.display = "none";
-                btn1.style.visibility = "hidden";
-            }
+        btn.onclick = function() {
+            modal.style.display = "block";
+            return false;
+        }
+        span.onclick = function() {
+            modal.style.display = "none";
+            btn1.style.visibility = "hidden";
         }
     </script>
 </body>
