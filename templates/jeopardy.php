@@ -668,13 +668,13 @@
         var span24 = document.getElementsByClassName("close")[24];
 
         // When the user clicks the button, open the modal 
-        btn1.onclick = function() {
+        btn1.onclick = () => {
             modal.style.display = "block";
         }
-        btn2.onclick = function() {
+        btn2.onclick = () => {
             modal1.style.display = "block";
         }
-        btn3.onclick = function() {
+        btn3.onclick = () => {
             modal2.style.display = "block";
         }
         btn4.onclick = function() {
