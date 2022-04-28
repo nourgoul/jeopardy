@@ -695,6 +695,12 @@
                 return checking;
             }
 
+            function updateScore() {
+                var ajax = new XMLHttpRequest();
+                ajax.open("GET", "?command=updSco&currSco=" + score.toString(), true);
+                ajax.send(null);
+            }
+
             // AJAX Query
             function getQuestion() {
                 // instantiate the object
@@ -736,6 +742,7 @@
                 if (userGuess.toLowerCase() == answer.toLowerCase()) {
                     // got it right
                     score += value;
+                    updateScore();
                     document.getElementById("score").textContent = score;
                     document.getElementById("message" + num.toString()).innerHTML =
                         "<div class='alert alert-success'>Correct!</div>";

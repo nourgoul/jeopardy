@@ -38,12 +38,22 @@ class JeopardyController
             case "add":
                 $this->add();
                 break;
+            case "updSco":
+                $this->updateScore();
+                break;
             case "logout":
                 $this->endSession();
             case "landing":
             default:
                 $this->landing();
         }
+    }
+
+    public function updateScore() {
+        if (!isset($_SESSION)) {
+            session_start();
+        }
+        $_SESSION["score"] = $_GET["currSco"];
     }
 
     public function questionPage() {
