@@ -584,6 +584,84 @@
                     },
                     function() {});
             });
+            $('#modalSubmit1').click(function() {
+                $('#answer0').attr('disabled', 'disabled');
+            });
+
+            $(document).ready(function() {
+                $('#modalSubmit2').click(function() {
+                    $('#answer1').attr('disabled', 'disabled');
+                });
+                $('#modalSubmit3').click(function() {
+                    $('#answer2').attr('disabled', 'disabled');
+                });
+                $('#modalSubmit4').click(function() {
+                    $('#answer3').attr('disabled', 'disabled');
+                });
+                $('#modalSubmit5').click(function() {
+                    $('#answer4').attr('disabled', 'disabled');
+                });
+                $('#modalSubmit6').click(function() {
+                    $('#answer5').attr('disabled', 'disabled');
+                });
+                $('#modalSubmit7').click(function() {
+                    $('#answer6').attr('disabled', 'disabled');
+                });
+                $('#modalSubmit8').click(function() {
+                    $('#answer7').attr('disabled', 'disabled');
+                });
+                $('#modalSubmit9').click(function() {
+                    $('#answer8').attr('disabled', 'disabled');
+                });
+                $('#modalSubmit10').click(function() {
+                    $('#answer9').attr('disabled', 'disabled');
+                });
+                $('#modalSubmit11').click(function() {
+                    $('#answer10').attr('disabled', 'disabled');
+                });
+                $('#modalSubmit12').click(function() {
+                    $('#answer11').attr('disabled', 'disabled');
+                });
+                $('#modalSubmit13').click(function() {
+                    $('#answer12').attr('disabled', 'disabled');
+                });
+                $('#modalSubmit14').click(function() {
+                    $('#answer13').attr('disabled', 'disabled');
+                });
+                $('#modalSubmit15').click(function() {
+                    $('#answer14').attr('disabled', 'disabled');
+                });
+                $('#modalSubmit16').click(function() {
+                    $('#answer15').attr('disabled', 'disabled');
+                });
+                $('#modalSubmit17').click(function() {
+                    $('#answer16').attr('disabled', 'disabled');
+                });
+                $('#modalSubmit18').click(function() {
+                    $('#answer17').attr('disabled', 'disabled');
+                });
+                $('#modalSubmit19').click(function() {
+                    $('#answer18').attr('disabled', 'disabled');
+                });
+                $('#modalSubmit20').click(function() {
+                    $('#answer19').attr('disabled', 'disabled');
+                });
+                $('#modalSubmit21').click(function() {
+                    $('#answer20').attr('disabled', 'disabled');
+                });
+                $('#modalSubmit22').click(function() {
+                    $('#answer21').attr('disabled', 'disabled');
+                });
+                $('#modalSubmit23').click(function() {
+                    $('#answer22').attr('disabled', 'disabled');
+                });
+                $('#modalSubmit24').click(function() {
+                    $('#answer23').attr('disabled', 'disabled');
+                });
+                $('#modalSubmit25').click(function() {
+                    $('#answer24').attr('disabled', 'disabled');
+                });
+            });
         </script>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
@@ -617,6 +695,7 @@
                 return checking;
             }
 
+            // AJAX Query
             function getQuestion() {
                 // instantiate the object
                 var ajax = new XMLHttpRequest();
@@ -953,6 +1032,7 @@
             }
             span24.onclick = function() {
                 modal24.style.display = "none";
+                btn24.style.visibility = "hidden";
             }
         </script>
 </body>
