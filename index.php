@@ -4,7 +4,7 @@
      * Helped by: Selena Johnson and Coby Chiu (Scj4ve and cc6hkb) on Jeopardy Controller
      * https://www.sqlshack.com/convert-sql-server-results-json/
      * https://www.tutorialspoint.com/How-to-disable-enable-an-input-box-with-jQuery
-     * Demo live at: https://cs4640.cs.virginia.edu/car2xz/sprint3/
+     * Demo live at: https://cs4640.cs.virginia.edu/ng9sc/sprint4/
      */
 
     spl_autoload_register(function ($classname) {
